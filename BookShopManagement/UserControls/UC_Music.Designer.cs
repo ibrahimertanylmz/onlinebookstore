@@ -120,7 +120,6 @@
             // 
             // panel10
             // 
-            this.panel10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel10.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel10.Controls.Add(this.pictureBox4);
             this.panel10.Controls.Add(this.label10);
@@ -172,7 +171,6 @@
             // 
             // panel9
             // 
-            this.panel9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel9.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel9.Controls.Add(this.pictureBox3);
             this.panel9.Controls.Add(this.label8);
@@ -216,7 +214,6 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label6);
@@ -260,7 +257,6 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
@@ -578,15 +574,15 @@
             this.panel11.Controls.Add(this.panel9);
             this.panel11.Controls.Add(this.panel2);
             this.panel11.Controls.Add(this.panel1);
-            this.panel11.Location = new System.Drawing.Point(0, 83);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel11.Location = new System.Drawing.Point(0, 86);
             this.panel11.Margin = new System.Windows.Forms.Padding(0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(985, 494);
+            this.panel11.Size = new System.Drawing.Size(726, 494);
             this.panel11.TabIndex = 13;
             // 
             // panel13
             // 
-            this.panel13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel13.AutoSize = true;
             this.panel13.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel13.Controls.Add(this.pictureBox6);
@@ -630,7 +626,6 @@
             // 
             // panel12
             // 
-            this.panel12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel12.AutoSize = true;
             this.panel12.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel12.Controls.Add(this.pictureBox5);
@@ -657,8 +652,8 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.panelRight);
             this.Controls.Add(this.panel11);
+            this.Controls.Add(this.panelRight);
             this.Controls.Add(this.label4);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "UC_Music";
