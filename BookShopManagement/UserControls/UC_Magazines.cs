@@ -16,6 +16,7 @@ namespace BookShopManagement.UserControls
         public UC_Magazines()
         {
             InitializeComponent();
+            panel11.HorizontalScroll.Visible = true;
         }
     }
 }
