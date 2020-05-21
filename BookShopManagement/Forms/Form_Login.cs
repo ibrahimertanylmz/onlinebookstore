@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,9 +26,30 @@ namespace BookShopManagement
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            using (Form_Dashboard fd = new Form_Dashboard())
+            SqlCommand command = new SqlCommand("select * FROM TBLCUSTOMER WHERE USERNAME=@P1 AND PASSWORD=@P2", Connection.connect);
+            if (command.Connection.State != ConnectionState.Open)
             {
-                fd.ShowDialog();
+                command.Connection.Open();
+            }
+            command.Parameters.AddWithValue("@P1", txtUserName.Text);
+            command.Parameters.AddWithValue("@P2", txtPassword.Text);
+            SqlDataReader dr = command.ExecuteReader();
+            if (dr.Read())
+            {
+                using (Form_Dashboard fd = new Form_Dashboard())
+                {
+                    fd.ShowDialog();
+                }
+            }
+            dr.Close();
+            MessageBox.Show("Username or Password is wrong.Please try again!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void linkLabelRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            using (Form_Register fr = new Form_Register())
+            {
+                fr.ShowDialog();
             }
         }
     }
