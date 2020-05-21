@@ -41,6 +41,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblForgotPassword = new System.Windows.Forms.Label();
+            this.linkLabelRegister = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -188,11 +189,23 @@
             this.lblForgotPassword.TabIndex = 1;
             this.lblForgotPassword.Text = "Forgot Password?";
             // 
-            // Form1
+            // linkLabelRegister
+            // 
+            this.linkLabelRegister.AutoSize = true;
+            this.linkLabelRegister.Location = new System.Drawing.Point(739, 487);
+            this.linkLabelRegister.Name = "linkLabelRegister";
+            this.linkLabelRegister.Size = new System.Drawing.Size(72, 21);
+            this.linkLabelRegister.TabIndex = 5;
+            this.linkLabelRegister.TabStop = true;
+            this.linkLabelRegister.Text = "Register";
+            this.linkLabelRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegister_LinkClicked);
+            // 
+            // Form_Login
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 720);
+            this.Controls.Add(this.linkLabelRegister);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUserName);
@@ -204,7 +217,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "Form_Login";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
@@ -230,6 +243,7 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblForgotPassword;
+        private System.Windows.Forms.LinkLabel linkLabelRegister;
     }
 }
 
