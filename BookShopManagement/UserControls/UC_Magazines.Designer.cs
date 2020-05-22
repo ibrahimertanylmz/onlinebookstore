@@ -644,10 +644,10 @@
             this.panel11.Controls.Add(this.panel2);
             this.panel11.Controls.Add(this.panel1);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel11.Location = new System.Drawing.Point(0, 86);
+            this.panel11.Location = new System.Drawing.Point(0, 91);
             this.panel11.Margin = new System.Windows.Forms.Padding(0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(726, 494);
+            this.panel11.Size = new System.Drawing.Size(726, 489);
             this.panel11.TabIndex = 13;
             // 
             // UC_Magazines

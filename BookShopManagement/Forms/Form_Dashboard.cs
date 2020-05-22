@@ -22,6 +22,8 @@ namespace BookShopManagement.Forms
             timerTime.Start();
             PanelWidth = panelLeft.Width;
             isCollapsed = false;
+            lblUserName.Text = Session.Instance.Customer["UserName"];
+            lblUserNo.Text = Session.Instance.Customer["Id"];
             UC_Home uch = new UC_Home();
             AddControlsToPanel(uch);
         }

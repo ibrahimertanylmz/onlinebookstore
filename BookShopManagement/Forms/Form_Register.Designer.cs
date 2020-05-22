@@ -111,7 +111,7 @@
             this.btnregister.Location = new System.Drawing.Point(330, 561);
             this.btnregister.Name = "btnregister";
             this.btnregister.Size = new System.Drawing.Size(547, 39);
-            this.btnregister.TabIndex = 30;
+            this.btnregister.TabIndex = 7;
             this.btnregister.Text = "Register";
             this.btnregister.UseVisualStyleBackColor = false;
             this.btnregister.Click += new System.EventHandler(this.btnregister_Click);
@@ -236,6 +236,7 @@
             // 
             // mskPhone
             // 
+            this.mskPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mskPhone.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.mskPhone.Location = new System.Drawing.Point(330, 364);
             this.mskPhone.Mask = "(999) 000-0000";
