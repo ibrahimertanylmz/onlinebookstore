@@ -36,13 +36,17 @@ namespace BookShopManagement
             SqlDataReader dr = command.ExecuteReader();
             if (dr.Read())
             {
+                Session.Instance.Set_Customer(Int32.Parse(dr.GetValue(0).ToString()), dr.GetValue(1).ToString(), dr.GetValue(2).ToString(), dr.GetValue(3).ToString(), dr.GetValue(4).ToString(), dr.GetValue(6).ToString());
                 using (Form_Dashboard fd = new Form_Dashboard())
                 {
                     fd.ShowDialog();
                 }
             }
+            else
+            {
+                MessageBox.Show("Username or Password is wrong.Please try again!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             dr.Close();
-            MessageBox.Show("Username or Password is wrong.Please try again!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void linkLabelRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

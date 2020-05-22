@@ -40,7 +40,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.lblForgotPassword = new System.Windows.Forms.Label();
             this.linkLabelRegister = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -138,7 +137,7 @@
             this.txtUserName.Location = new System.Drawing.Point(340, 369);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(547, 31);
-            this.txtUserName.TabIndex = 3;
+            this.txtUserName.TabIndex = 1;
             // 
             // label4
             // 
@@ -158,7 +157,7 @@
             this.txtPassword.Location = new System.Drawing.Point(340, 442);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(547, 31);
-            this.txtPassword.TabIndex = 3;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
@@ -177,25 +176,17 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // lblForgotPassword
-            // 
-            this.lblForgotPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblForgotPassword.AutoSize = true;
-            this.lblForgotPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblForgotPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.lblForgotPassword.Location = new System.Drawing.Point(539, 487);
-            this.lblForgotPassword.Name = "lblForgotPassword";
-            this.lblForgotPassword.Size = new System.Drawing.Size(141, 19);
-            this.lblForgotPassword.TabIndex = 1;
-            this.lblForgotPassword.Text = "Forgot Password?";
-            // 
             // linkLabelRegister
             // 
+            this.linkLabelRegister.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabelRegister.AutoSize = true;
-            this.linkLabelRegister.Location = new System.Drawing.Point(739, 487);
+            this.linkLabelRegister.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.linkLabelRegister.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.linkLabelRegister.Location = new System.Drawing.Point(579, 487);
             this.linkLabelRegister.Name = "linkLabelRegister";
-            this.linkLabelRegister.Size = new System.Drawing.Size(72, 21);
-            this.linkLabelRegister.TabIndex = 5;
+            this.linkLabelRegister.Size = new System.Drawing.Size(68, 19);
+            this.linkLabelRegister.TabIndex = 3;
             this.linkLabelRegister.TabStop = true;
             this.linkLabelRegister.Text = "Register";
             this.linkLabelRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegister_LinkClicked);
@@ -212,7 +203,6 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.lblForgotPassword);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -242,7 +232,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Label lblForgotPassword;
         private System.Windows.Forms.LinkLabel linkLabelRegister;
     }
 }
