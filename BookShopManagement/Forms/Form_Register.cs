@@ -20,7 +20,7 @@ namespace BookShopManagement.Forms
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-                this.Dispose();
+            this.Dispose();
         }
 
         private void btnregister_Click(object sender, EventArgs e)
