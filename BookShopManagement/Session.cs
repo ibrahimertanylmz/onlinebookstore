@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookShopManagement.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,33 +9,19 @@ namespace BookShopManagement
 {
     class Session
     {
-        private Session()
-        {
-        }
-        private static Session instance = null;
-        public static Session Instance
-        {
-            get
-            {
-                if (instance == null)
-                {
-                    instance = new Session();
-                }
-                return instance;
-            }
-        }
-        public IDictionary<string, string> Customer = new Dictionary<string, string>();
+        private Session() { }
+        public static Session Instance { get; private set; } = new Session();
+
+        public Customer Customer = null;
+
         IDictionary<int, int> itemslist = new Dictionary<int, int>();
-        public void Set_Customer(int id,string name,string address,string email,string UserName,string phone)
+
+        public void SetCustomer(Customer customer)
         {
-            Customer.Add("Id",id.ToString());
-            Customer.Add("Name",name);
-            Customer.Add("Address",address);
-            Customer.Add("Email",email);
-            Customer.Add("UserName",UserName);
-            Customer.Add("Phone",phone);
+            this.Customer = customer;
         }
-        public void add_item(int id,int qty)
+
+        public void add_item(int id, int qty)
         {
             if (itemslist.ContainsKey(id))
             {
@@ -45,6 +32,7 @@ namespace BookShopManagement
                 itemslist.Add(id, qty);
             }
         }
+
         public void delete_item(int id)
         {
             itemslist.Remove(id);
