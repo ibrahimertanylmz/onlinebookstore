@@ -54,9 +54,12 @@
             this.spacer1 = new System.Windows.Forms.Panel();
             this.title = new System.Windows.Forms.Label();
             this.leftPanel = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.rightPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // rightPanel
@@ -86,7 +89,7 @@
             this.lblPage.AutoSize = true;
             this.lblPage.Location = new System.Drawing.Point(32, 247);
             this.lblPage.Name = "lblPage";
-            this.lblPage.Size = new System.Drawing.Size(64, 23);
+            this.lblPage.Size = new System.Drawing.Size(53, 21);
             this.lblPage.TabIndex = 16;
             this.lblPage.Text = "page";
             // 
@@ -96,7 +99,7 @@
             this.lblPageText.ForeColor = System.Drawing.Color.Black;
             this.lblPageText.Location = new System.Drawing.Point(32, 225);
             this.lblPageText.Name = "lblPageText";
-            this.lblPageText.Size = new System.Drawing.Size(62, 23);
+            this.lblPageText.Size = new System.Drawing.Size(51, 21);
             this.lblPageText.TabIndex = 15;
             this.lblPageText.Text = "Page";
             // 
@@ -105,7 +108,7 @@
             this.lblISBN.AutoSize = true;
             this.lblISBN.Location = new System.Drawing.Point(36, 97);
             this.lblISBN.Name = "lblISBN";
-            this.lblISBN.Size = new System.Drawing.Size(47, 23);
+            this.lblISBN.Size = new System.Drawing.Size(40, 21);
             this.lblISBN.TabIndex = 14;
             this.lblISBN.Text = "isbn";
             // 
@@ -115,7 +118,7 @@
             this.lblISBNText.ForeColor = System.Drawing.Color.Black;
             this.lblISBNText.Location = new System.Drawing.Point(33, 73);
             this.lblISBNText.Name = "lblISBNText";
-            this.lblISBNText.Size = new System.Drawing.Size(51, 23);
+            this.lblISBNText.Size = new System.Drawing.Size(44, 21);
             this.lblISBNText.TabIndex = 13;
             this.lblISBNText.Text = "ISBN";
             // 
@@ -124,7 +127,7 @@
             this.lblAuthor.AutoSize = true;
             this.lblAuthor.Location = new System.Drawing.Point(33, 145);
             this.lblAuthor.Name = "lblAuthor";
-            this.lblAuthor.Size = new System.Drawing.Size(74, 23);
+            this.lblAuthor.Size = new System.Drawing.Size(63, 21);
             this.lblAuthor.TabIndex = 12;
             this.lblAuthor.Text = "author";
             // 
@@ -134,7 +137,7 @@
             this.lblAuthorText.ForeColor = System.Drawing.Color.Black;
             this.lblAuthorText.Location = new System.Drawing.Point(33, 123);
             this.lblAuthorText.Name = "lblAuthorText";
-            this.lblAuthorText.Size = new System.Drawing.Size(75, 23);
+            this.lblAuthorText.Size = new System.Drawing.Size(65, 21);
             this.lblAuthorText.TabIndex = 11;
             this.lblAuthorText.Text = "Author";
             // 
@@ -143,7 +146,7 @@
             this.lblPublisher.AutoSize = true;
             this.lblPublisher.Location = new System.Drawing.Point(33, 195);
             this.lblPublisher.Name = "lblPublisher";
-            this.lblPublisher.Size = new System.Drawing.Size(97, 23);
+            this.lblPublisher.Size = new System.Drawing.Size(79, 21);
             this.lblPublisher.TabIndex = 10;
             this.lblPublisher.Text = "publisher";
             // 
@@ -153,7 +156,7 @@
             this.lblPublisherText.ForeColor = System.Drawing.Color.Black;
             this.lblPublisherText.Location = new System.Drawing.Point(33, 173);
             this.lblPublisherText.Name = "lblPublisherText";
-            this.lblPublisherText.Size = new System.Drawing.Size(95, 23);
+            this.lblPublisherText.Size = new System.Drawing.Size(77, 21);
             this.lblPublisherText.TabIndex = 9;
             this.lblPublisherText.Text = "Publisher";
             // 
@@ -162,7 +165,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Location = new System.Drawing.Point(34, 44);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(68, 23);
+            this.lblName.Size = new System.Drawing.Size(56, 21);
             this.lblName.TabIndex = 8;
             this.lblName.Text = "name";
             // 
@@ -172,7 +175,7 @@
             this.lblNameText.ForeColor = System.Drawing.Color.Black;
             this.lblNameText.Location = new System.Drawing.Point(33, 20);
             this.lblNameText.Name = "lblNameText";
-            this.lblNameText.Size = new System.Drawing.Size(71, 23);
+            this.lblNameText.Size = new System.Drawing.Size(58, 21);
             this.lblNameText.TabIndex = 5;
             this.lblNameText.Text = "Name";
             // 
@@ -198,7 +201,7 @@
             this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(148, 65);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(38, 28);
+            this.label12.Size = new System.Drawing.Size(32, 23);
             this.label12.TabIndex = 6;
             this.label12.Text = "00";
             // 
@@ -208,7 +211,7 @@
             this.label13.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(6, 65);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(117, 28);
+            this.label13.Size = new System.Drawing.Size(94, 23);
             this.label13.TabIndex = 7;
             this.label13.Text = "Quantity:";
             // 
@@ -241,7 +244,7 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(148, 107);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 28);
+            this.label3.Size = new System.Drawing.Size(32, 23);
             this.label3.TabIndex = 0;
             this.label3.Text = "00";
             // 
@@ -251,7 +254,7 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(6, 107);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 28);
+            this.label2.Size = new System.Drawing.Size(110, 23);
             this.label2.TabIndex = 0;
             this.label2.Text = "Total Price:";
             // 
@@ -327,7 +330,7 @@
             this.title.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.Location = new System.Drawing.Point(285, 20);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(93, 32);
+            this.title.Size = new System.Drawing.Size(71, 25);
             this.title.TabIndex = 0;
             this.title.Text = "Books";
             // 
@@ -341,10 +344,32 @@
             this.leftPanel.Size = new System.Drawing.Size(726, 507);
             this.leftPanel.TabIndex = 10;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(205)))));
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(3, 73);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(720, 71);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(114, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(479, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "There is no product in this category!";
+            // 
             // UC_Books
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.leftPanel);
             this.Controls.Add(this.rightPanel);
             this.Controls.Add(this.title);
@@ -358,6 +383,8 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,5 +417,7 @@
         private System.Windows.Forms.Label lblNameText;
         private System.Windows.Forms.Label lblPage;
         private System.Windows.Forms.Label lblPageText;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
