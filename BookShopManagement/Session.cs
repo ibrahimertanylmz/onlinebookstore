@@ -8,9 +8,7 @@ namespace BookShopManagement
 {
     class Session
     {
-        private Session()
-        {
-        }
+        private Session() { }
         private static Session instance = null;
         public static Session Instance
         {
