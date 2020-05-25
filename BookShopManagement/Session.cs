@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookShopManagement.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,18 +12,13 @@ namespace BookShopManagement
         private Session() { }
         public static Session Instance { get; private set; } = new Session();
 
-        public IDictionary<string, string> Customer = new Dictionary<string, string>();
+        public Customer Customer = null;
 
         IDictionary<int, int> itemslist = new Dictionary<int, int>();
 
-        public void Set_Customer(int id, string name, string address, string email, string username, string phone)
+        public void SetCustomer(Customer customer)
         {
-            Customer.Add("Id", id.ToString());
-            Customer.Add("Name", name);
-            Customer.Add("Address", address);
-            Customer.Add("Email", email);
-            Customer.Add("UserName", username);
-            Customer.Add("Phone", phone);
+            this.Customer = customer;
         }
 
         public void add_item(int id, int qty)
