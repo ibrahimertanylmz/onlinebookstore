@@ -27,16 +27,22 @@ namespace BookShopManagement
             command.Parameters.AddWithValue("@P2", password);
             SqlDataReader dr = command.ExecuteReader();
 
+            if (!dr.HasRows)
+            {
+                dr.Close();
+                return false;
+            }
+
             if (dr.Read())
             {
                 Customer customer = new Customer(Int32.Parse(dr.GetValue(0).ToString()), dr.GetValue(1).ToString(), dr.GetValue(2).ToString(), dr.GetValue(6).ToString(), dr.GetValue(3).ToString(), dr.GetValue(4).ToString(), dr.GetValue(5).ToString());
                 Session.Instance.SetCustomer(customer);
+                dr.Close();
                 return true;
             }
 
             dr.Close();
-
-            throw new Exception();
+            return false;
         }
 
         public void Register (string name, string address, string email, string username, string password, string phone)
