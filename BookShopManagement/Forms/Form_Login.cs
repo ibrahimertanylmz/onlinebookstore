@@ -38,6 +38,9 @@ namespace BookShopManagement
 
             if (Auth.Instance.Login(username, password))
             {
+                txtUserName.Text = "";
+                txtPassword.Text = "";
+
                 using (Form_Dashboard fd = new Form_Dashboard())
                 {
                     fd.ShowDialog();
