@@ -17,15 +17,7 @@ namespace BookShopManagement.Classes
         public string CustomerId { get; protected set; }
         public ArrayList ItemsToPurchase = new ArrayList();
         public double PaymentAmount { get; protected set; }
-        public int PaymentType { get; protected set; } //0 for cash, 1 for creditcard
-        
-        public ShoppingCart(string CustomerId, ArrayList ItemsToPurchase, double PaymentAmount, int PaymentType)
-        {
-            this.CustomerId = CustomerId;
-            this.ItemsToPurchase = ItemsToPurchase;
-            this.PaymentAmount = PaymentAmount;
-            this.PaymentType = PaymentType;
-        }
+        public int PaymentType { get; protected set; } //0 for cash, 1 for creditcard      
 
         public void AddProduct(ItemToPurchase itemToPurchase)
         {

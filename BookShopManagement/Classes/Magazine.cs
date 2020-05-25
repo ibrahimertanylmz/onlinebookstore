@@ -16,7 +16,7 @@ namespace BookShopManagement.Classes
         public string Issue { get; protected set; }
         public string Type { get; protected set; }
 
-        public Magazine()
+        public Magazine(string Issue, string Type)
         {
             this.Issue = Issue;
             this.Type = Type;
