@@ -1,4 +1,11 @@
-﻿using BookShopManagement.Forms;
+﻿/**
+ * @author
+ * @date
+ * 
+ * @edited_by Enes Solak 25.05.2020
+ */ 
+ 
+using BookShopManagement.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

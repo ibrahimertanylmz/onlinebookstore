@@ -1,6 +1,8 @@
 ﻿/**
  * @author İbrahim Ertan Yılmaz  
  * @date 25.05.2020
+ * 
+ * @edited_by Enes Solak 25.05.2020
  */
 
 using System;

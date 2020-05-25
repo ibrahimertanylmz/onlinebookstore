@@ -1,4 +1,11 @@
-﻿using BookShopManagement.Classes;
+﻿/**
+ * @author
+ * @date
+ * 
+ * @edited_by Enes Solak 25.02.2020
+ */
+
+using BookShopManagement.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;

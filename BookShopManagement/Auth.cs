@@ -1,4 +1,9 @@
-﻿using BookShopManagement.Classes;
+﻿/**
+ * @author Enes Solak
+ * @date 25.05.2020
+ */
+
+using BookShopManagement.Classes;
 using System;
 using System.Collections.Generic;
 using System.Data;
