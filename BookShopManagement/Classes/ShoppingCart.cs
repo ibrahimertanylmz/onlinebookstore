@@ -14,7 +14,9 @@ namespace BookShopManagement.Classes
 {
     class ShoppingCart 
     {
+        public static ShoppingCart Instance { get; private set; } = new ShoppingCart();
         public string CustomerId { get; protected set; }
+
         public ArrayList ItemsToPurchase = new ArrayList();
         public double PaymentAmount { get; protected set; }
         public int PaymentType { get; protected set; } //0 for cash, 1 for creditcard      
