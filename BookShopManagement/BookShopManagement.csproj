@@ -56,6 +56,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Book.cs" />
+    <Compile Include="Classes\Customer.cs" />
+    <Compile Include="Classes\ItemToPurchase.cs" />
+    <Compile Include="Classes\Magazine.cs" />
+    <Compile Include="Classes\MusicCD.cs" />
+    <Compile Include="Classes\Product.cs" />
+    <Compile Include="Classes\ShoppingCart.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="CustomControls\DragControl.cs">
       <SubType>Component</SubType>
