@@ -1,4 +1,9 @@
-﻿using System;
+﻿/**
+ * @author İbrahim Ertan Yılmaz  
+ * @date 25.05.2020
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +13,14 @@ namespace BookShopManagement.Classes
 {
     class ItemToPurchase
     {
-        public Product Pr { get; protected set; }
+        public Product Product { get; protected set; }
         public int Quantity { get; protected set; }
+
+        public ItemToPurchase()
+        {
+            this.Product = Product;
+            this.Quantity = Quantity;
+        }
     }
 }
     
