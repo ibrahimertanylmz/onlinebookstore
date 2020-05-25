@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+ * @author
+ * @date
+ * 
+ * @edited_by Enes Solak 25.05.2020
+ */ 
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,25 +27,22 @@ namespace BookShopManagement.Forms
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-                this.Dispose();
+            this.Dispose();
         }
 
         private void btnregister_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlCommand add = new SqlCommand("insert into TBLCUSTOMER (NAME,ADDRESS,EMAIL,USERNAME,PASSWORD,PHONE) VALUES (@P1,@P2,@P3,@P4,@P5,@P6)", Connection.connect);
-                if (add.Connection.State != ConnectionState.Open)
-                {
-                    add.Connection.Open();
-                }
-                add.Parameters.AddWithValue("@P1", txtName.Text);
-                add.Parameters.AddWithValue("@P2", txtAdress.Text);
-                add.Parameters.AddWithValue("@P3", txtEmail.Text);
-                add.Parameters.AddWithValue("@P4", txtUserName.Text);
-                add.Parameters.AddWithValue("@P5", txtPassword.Text);
-                add.Parameters.AddWithValue("@P6", mskPhone.Text);
-                add.ExecuteNonQuery();
+                string name = txtName.Text;
+                string address = txtAdress.Text;
+                string email = txtEmail.Text;
+                string username = txtUserName.Text;
+                string password = txtPassword.Text;
+                string phone = mskPhone.Text;
+
+                Auth.Instance.Register(name, address, email, username, password, phone);
+
                 MessageBox.Show("Congratulations new register!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
             }

@@ -1,4 +1,11 @@
-﻿using BookShopManagement.Forms;
+﻿/**
+ * @author
+ * @date
+ * 
+ * @edited_by Enes Solak 25.05.2020
+ */ 
+ 
+using BookShopManagement.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,17 +33,11 @@ namespace BookShopManagement
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand("select * FROM TBLCUSTOMER WHERE USERNAME=@P1 AND PASSWORD=@P2", Connection.connect);
-            if (command.Connection.State != ConnectionState.Open)
+            string username = txtUserName.Text;
+            string password = txtPassword.Text;
+
+            if (Auth.Instance.Login(username, password))
             {
-                command.Connection.Open();
-            }
-            command.Parameters.AddWithValue("@P1", txtUserName.Text);
-            command.Parameters.AddWithValue("@P2", txtPassword.Text);
-            SqlDataReader dr = command.ExecuteReader();
-            if (dr.Read())
-            {
-                Session.Instance.Set_Customer(Int32.Parse(dr.GetValue(0).ToString()), dr.GetValue(1).ToString(), dr.GetValue(2).ToString(), dr.GetValue(3).ToString(), dr.GetValue(4).ToString(), dr.GetValue(6).ToString());
                 using (Form_Dashboard fd = new Form_Dashboard())
                 {
                     fd.ShowDialog();
@@ -46,7 +47,6 @@ namespace BookShopManagement
             {
                 MessageBox.Show("Username or Password is wrong.Please try again!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            dr.Close();
         }
 
         private void linkLabelRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
