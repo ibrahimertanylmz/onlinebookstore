@@ -9,18 +9,7 @@ namespace BookShopManagement
     class Session
     {
         private Session() { }
-        private static Session instance = null;
-        public static Session Instance
-        {
-            get
-            {
-                if (instance == null)
-                {
-                    instance = new Session();
-                }
-                return instance;
-            }
-        }
+        public static Session Instance { get; private set; } = new Session();
         public IDictionary<string, string> Customer = new Dictionary<string, string>();
         IDictionary<int, int> itemslist = new Dictionary<int, int>();
         public void Set_Customer(int id,string name,string address,string email,string UserName,string phone)
