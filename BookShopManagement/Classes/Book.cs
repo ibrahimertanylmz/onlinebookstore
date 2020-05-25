@@ -1,6 +1,8 @@
 ﻿/**
  * @author İbrahim Ertan Yılmaz  
  * @date 25.05.2020
+ * 
+ * @edited_by Enes Solak 26.05.2020
  */
 
 using System;
@@ -20,7 +22,7 @@ namespace BookShopManagement.Classes
         public string Publisher { get; protected set; }
         public int Page { get; protected set; }
 
-        public Book(int Id, string Name,  double Price, int Quantity, string Picture, string ISBN, string Author, string Publisher, int Page)
+        public Book(int Id, string Name, double Price, int Quantity, string Picture, string ISBN, string Author, string Publisher, int Page)
         {
             this.ISBN = ISBN;
             this.Author = Author;
@@ -35,29 +37,30 @@ namespace BookShopManagement.Classes
 
         public static Book CreateFromID(int ID)
         {
-            SqlCommand command = new SqlCommand("select * FROM TBLPRODUCT WHERE ID=@P1", Connection.connect);
+            SqlCommand command = new SqlCommand("SELECT * FROM TBLPRODUCT WHERE ID=@P1", Connection.connect);
             if (command.Connection.State != ConnectionState.Open)
-            {
                 command.Connection.Open();
-            }
             command.Parameters.AddWithValue("@P1", ID);
+            SqlDataReader reader = command.ExecuteReader();
 
-            SqlDataReader dr = command.ExecuteReader();
-            if (dr.Read())
+            if (reader.Read())
             {
-                return new Book(
-                    Int32.Parse(dr[0].ToString()),
-                    dr[2].ToString(),
-                    double.Parse(dr[3].ToString()),
-                    Int32.Parse(dr[4].ToString()),
-                    dr[5].ToString(),
-                    dr[6].ToString(),
-                    dr[7].ToString(),
-                    dr[8].ToString(),
-                    Int32.Parse(dr[9].ToString())
-                    );
+                Book book = new Book(
+                    Int32.Parse(reader[0].ToString()),
+                    reader[2].ToString(),
+                    double.Parse(reader[3].ToString()),
+                    Int32.Parse(reader[4].ToString()),
+                    reader[5].ToString(),
+                    reader[6].ToString(),
+                    reader[7].ToString(),
+                    reader[8].ToString(),
+                    Int32.Parse(reader[9].ToString())
+                );
+                reader.Close();
+                return book;
             }
-            dr.Close();
+
+            reader.Close();
             throw new Exception();
         }
     }
