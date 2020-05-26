@@ -40,11 +40,11 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblNameText = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblQty = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnDecrease = new System.Windows.Forms.Button();
@@ -182,11 +182,11 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.label12);
+            this.panel5.Controls.Add(this.lblQty);
             this.panel5.Controls.Add(this.label13);
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.btnAdd);
-            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.lblPrice);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.panel6);
@@ -196,15 +196,15 @@
             this.panel5.Size = new System.Drawing.Size(239, 194);
             this.panel5.TabIndex = 4;
             // 
-            // label12
+            // lblQty
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(148, 65);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(32, 23);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "00";
+            this.lblQty.AutoSize = true;
+            this.lblQty.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQty.Location = new System.Drawing.Point(148, 65);
+            this.lblQty.Name = "lblQty";
+            this.lblQty.Size = new System.Drawing.Size(32, 23);
+            this.lblQty.TabIndex = 6;
+            this.lblQty.Text = "00";
             // 
             // label13
             // 
@@ -238,16 +238,17 @@
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add To Cart";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // label3
+            // lblPrice
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(148, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 23);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "00";
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(148, 107);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(32, 23);
+            this.lblPrice.TabIndex = 0;
+            this.lblPrice.Text = "00";
             // 
             // label2
             // 
@@ -282,6 +283,7 @@
             this.btnDecrease.TabIndex = 2;
             this.btnDecrease.Text = "-";
             this.btnDecrease.UseVisualStyleBackColor = false;
+            this.btnDecrease.Click += new System.EventHandler(this.btnDecrease_Click);
             // 
             // btnIncrease
             // 
@@ -296,6 +298,7 @@
             this.btnIncrease.TabIndex = 2;
             this.btnIncrease.Text = "+";
             this.btnIncrease.UseVisualStyleBackColor = false;
+            this.btnIncrease.Click += new System.EventHandler(this.btnIncrease_Click);
             // 
             // panel6
             // 
@@ -398,7 +401,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnDecrease;
@@ -407,7 +410,7 @@
         private System.Windows.Forms.Panel spacer2;
         private System.Windows.Forms.Panel spacer1;
         private System.Windows.Forms.Label title;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblQty;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.Label lblISBN;

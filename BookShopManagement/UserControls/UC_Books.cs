@@ -22,10 +22,14 @@ namespace BookShopManagement.UserControls
 {
     public partial class UC_Books : UserControl
     {
+        ItemToPurchase item = new ItemToPurchase();
+        int lastbutton = -1;
         public UC_Books()
         {
             InitializeComponent();
             leftPanel.AutoScroll = true;
+            lblPrice.Text = "0 €";
+            lblQty.Text = "0";
             lblName.Text = "";
             lblISBN.Text = "";
             lblAuthor.Text = "";
@@ -119,14 +123,60 @@ namespace BookShopManagement.UserControls
         private void OnPanelClick (object sender, EventArgs e)
         {
             string[] name = ((Button)sender).Name.Split('-');
+            if (int.Parse(name[1]) != lastbutton)
+            {
+                Book book = Book.CreateFromID(int.Parse(name[1]));
 
-            Book book = Book.CreateFromID(int.Parse(name[1]));
+                item.Product = book;
+                item.Quantity = 1;
+                lblName.Text = book.Name;
+                lblISBN.Text = book.ISBN;
+                lblAuthor.Text = book.Author;
+                lblPublisher.Text = book.Publisher;
+                lblPage.Text = book.Page.ToString();
+                lblQty.Text = item.Quantity.ToString();
+                lblPrice.Text = (item.Quantity * item.Product.Price).ToString() + " €";
+            }
+            lastbutton = int.Parse(name[1]);
+        }
 
-            lblName.Text = book.Name;
-            lblISBN.Text = book.ISBN;
-            lblAuthor.Text = book.Author;
-            lblPublisher.Text = book.Publisher;
-            lblPage.Text = book.Page.ToString();
+        private void btnIncrease_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (item.Product.Name != "")
+                {
+                    item.Quantity++;
+                    lblQty.Text = item.Quantity.ToString();
+                    lblPrice.Text = (item.Quantity * item.Product.Price).ToString() + " €";
+                }
+            }
+            catch (Exception) { }
+        }
+        private void btnDecrease_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (item.Quantity > 0) { item.Quantity--; }
+                lblQty.Text = item.Quantity.ToString();
+                lblPrice.Text = (item.Quantity * item.Product.Price).ToString() + " €";
+            }
+            catch (Exception) { }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (item.Product.Name != "")
+                {
+                    ShoppingCart.Instance.AddProduct(item);
+                    item.Quantity = 1;
+                    lblQty.Text = item.Quantity.ToString();
+                    lblPrice.Text = (item.Quantity * item.Product.Price).ToString() + " €";
+                }
+            }
+            catch (Exception) { };
         }
     }
 }
