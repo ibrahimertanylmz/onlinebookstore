@@ -109,7 +109,11 @@ namespace BookShopManagement.UserControls
 
                 count++;
             }
-
+            if (count==0)
+            {
+                groupBox1.Visible = true;
+            }
+           
             reader.Close();
         }
 
