@@ -1,5 +1,5 @@
 ﻿/**
- * @author
+ * @author Ahmad Zaidan
  * @date
  * 
  * @edited_by Enes Solak 26.05.2020
@@ -26,7 +26,6 @@ namespace BookShopManagement.UserControls
         {
             InitializeComponent();
             leftPanel.AutoScroll = true;
-
             lblName.Text = "";
             lblISBN.Text = "";
             lblAuthor.Text = "";

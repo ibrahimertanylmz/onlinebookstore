@@ -59,6 +59,7 @@
             this.rightPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.leftPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -337,6 +338,7 @@
             // leftPanel
             // 
             this.leftPanel.AutoScroll = true;
+            this.leftPanel.Controls.Add(this.groupBox1);
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.leftPanel.Location = new System.Drawing.Point(0, 73);
             this.leftPanel.Margin = new System.Windows.Forms.Padding(0);
@@ -346,9 +348,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(205)))));
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 73);
+            this.groupBox1.Location = new System.Drawing.Point(3, 174);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(720, 71);
             this.groupBox1.TabIndex = 0;
@@ -359,17 +362,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(114, 23);
+            this.label1.Location = new System.Drawing.Point(101, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(479, 32);
+            this.label1.Size = new System.Drawing.Size(517, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "There is no product in this category!";
+            this.label1.Text = "There are no products in this category!";
             // 
             // UC_Books
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.leftPanel);
             this.Controls.Add(this.rightPanel);
             this.Controls.Add(this.title);
@@ -383,6 +385,7 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
+            this.leftPanel.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

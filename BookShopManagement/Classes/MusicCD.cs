@@ -17,8 +17,9 @@ namespace BookShopManagement.Classes
     {
         public string Singer { get; protected set; }
         public string Type { get; protected set; }
+        public string Issue { get; protected set; }
 
-        public MusicCD(int Id, string Name, double Price, int Quantity, string Picture, string Singer, string Type)
+        public MusicCD(int Id, string Name, double Price, int Quantity, string Picture, string Singer, string Type,string Issue)
         {
             this.Singer = Singer;
             this.Type = Type;
@@ -26,6 +27,7 @@ namespace BookShopManagement.Classes
             this.Id = Id;
             this.Price = Price;
             this.Quantity = Quantity;
+            this.Issue = Issue;
             this.Picture = Picture;
         }
         public static MusicCD CreateFromID(int ID)
@@ -40,15 +42,18 @@ namespace BookShopManagement.Classes
             SqlDataReader dr = command.ExecuteReader();
             if (dr.Read())
             {
-                return new MusicCD(
+                MusicCD musicCD=new MusicCD(
                     Int32.Parse(dr[0].ToString()),
                     dr[2].ToString(),
                     double.Parse(dr[3].ToString()),
                     Int32.Parse(dr[4].ToString()),
                     dr[5].ToString(),
                     dr[11].ToString(),
-                    dr[12].ToString()
+                    dr[12].ToString(),
+                    dr[10].ToString()
                     );
+                dr.Close();
+                return musicCD;
             }
             dr.Close();
             throw new Exception();
