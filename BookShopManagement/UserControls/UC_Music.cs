@@ -1,4 +1,9 @@
-﻿using System;
+﻿/**
+ * @author Ahmad Zaidan
+ * @date
+ * 
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -19,7 +24,6 @@ namespace BookShopManagement.UserControls
         {
             InitializeComponent();
             leftPanel.AutoScroll = true;
-
             lblName.Text = "";
             lblIssue.Text = "";
             lblSinger.Text = "";
