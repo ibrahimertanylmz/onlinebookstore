@@ -7,6 +7,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,23 +17,47 @@ namespace BookShopManagement.Classes
     class Customer 
     {
         public int CustomerID { get; protected set; }
-        public string Name { get; protected set; }
+        public string FirstName { get; protected set; }
+        public string LastName { get; protected set; }
         public string Adress { get; protected set; }
         public string Phone { get; protected set; }
         public string Email { get; protected set; }
         public string Username { get; protected set; }
         public string Password { get; protected set; }
 
-        public Customer(int CustomerID, string Name, string Adress, string Phone, string Email, string Username, string Password)
+        public Customer(int CustomerID, string FirstName,string LastName, string Adress, string Phone, string Email, string Username, string Password)
         {
             this.CustomerID = CustomerID;
-            this.Name = Name;
+            this.FirstName = FirstName;
+            this.LastName = LastName;
             this.Adress = Adress;
             this.Phone = Phone;
             this.Email = Email;
             this.Username = Username;
             this.Password = Password;
         }
+
+        public void Update(string firstname,string lastname, string address, string phone ,string email,string username, string password)
+        {
+            SqlCommand update = new SqlCommand("UPDATE TBLCUSTOMER SET FIRSTNAME=@P1,LASTNAME=@P2,ADDRESS=@P3,EMAIL=@P4,USERNAME=@P5,PASSWORD=@P6,PHONE=@P7 WHERE CUSTOMERID="+CustomerID, Connection.connect);
+            update.Parameters.AddWithValue("@P1", firstname);
+            update.Parameters.AddWithValue("@P2", lastname);
+            update.Parameters.AddWithValue("@P3", address);
+            update.Parameters.AddWithValue("@P4", email);
+            update.Parameters.AddWithValue("@P5", username);
+            update.Parameters.AddWithValue("@P6", password);
+            update.Parameters.AddWithValue("@P7", phone);
+            update.ExecuteNonQuery();
+            Connection.connect.Close();
+           
+            this.FirstName = firstname;
+            this.LastName = lastname;
+            this.Adress = address;
+            this.Phone = phone;
+            this.Email = email;
+            this.Username = username;
+            this.Password = password;
+        }
+
     }
 }
-    

@@ -35,7 +35,7 @@ namespace BookShopManagement
 
             if (dr.Read())
             {
-                Customer customer = new Customer(Int32.Parse(dr.GetValue(0).ToString()), dr.GetValue(1).ToString(), dr.GetValue(2).ToString(), dr.GetValue(6).ToString(), dr.GetValue(3).ToString(), dr.GetValue(4).ToString(), dr.GetValue(5).ToString());
+                Customer customer = new Customer(Convert.ToInt16(dr["CUSTOMERID"].ToString()), dr["FIRSTNAME"].ToString(), dr["LASTNAME"].ToString(), dr["ADDRESS"].ToString(),dr["PHONE"].ToString(), dr["EMAIL"].ToString(), dr["USERNAME"].ToString(), dr["PASSWORD"].ToString());
                 Session.Instance.SetCustomer(customer);
                 dr.Close();
                 return true;
