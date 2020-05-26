@@ -88,35 +88,30 @@ namespace BookShopManagement.Forms
             UC_Home uch = new UC_Home();
             AddControlsToPanel(uch);
         }
-
         private void btnBooks_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnBooks);
             UC_Books bk = new UC_Books();
             AddControlsToPanel(bk);
         }
-
         private void btnMagazines_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnMagazines);
             UC_Magazines mg = new UC_Magazines();
             AddControlsToPanel(mg);
         }
-
         private void btnMusic_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnMusic);
             UC_Music mu = new UC_Music();
             AddControlsToPanel(mu);
         }
-
         private void btnUser_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnUser);
             UC_ManageUser um = new UC_ManageUser();
             AddControlsToPanel(um);
         }
-
         private void btnCart_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnCart);
@@ -124,7 +119,6 @@ namespace BookShopManagement.Forms
             AddControlsToPanel(sc);
 
         }
-
         private void btnSettings_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnSettings);

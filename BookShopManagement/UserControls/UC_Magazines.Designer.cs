@@ -35,16 +35,16 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.btnIncrease = new System.Windows.Forms.Button();
-            this.btnDecrease = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.lblQty = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnDecrease = new System.Windows.Forms.Button();
+            this.btnIncrease = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.lblNameText = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblPublisherText = new System.Windows.Forms.Label();
@@ -130,11 +130,11 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.label12);
+            this.panel5.Controls.Add(this.lblQty);
             this.panel5.Controls.Add(this.label13);
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.btnAdd);
-            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.lblPrice);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.panel6);
@@ -144,72 +144,34 @@
             this.panel5.Size = new System.Drawing.Size(239, 194);
             this.panel5.TabIndex = 4;
             // 
-            // panel6
+            // lblQty
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(239, 7);
-            this.panel6.TabIndex = 4;
+            this.lblQty.AutoSize = true;
+            this.lblQty.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQty.Location = new System.Drawing.Point(148, 65);
+            this.lblQty.Name = "lblQty";
+            this.lblQty.Size = new System.Drawing.Size(32, 23);
+            this.lblQty.TabIndex = 6;
+            this.lblQty.Text = "00";
             // 
-            // panel7
+            // label13
             // 
-            this.panel7.Controls.Add(this.btnDecrease);
-            this.panel7.Controls.Add(this.btnIncrease);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 7);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(239, 37);
-            this.panel7.TabIndex = 4;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(6, 65);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(94, 23);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "Quantity:";
             // 
-            // btnIncrease
+            // panel8
             // 
-            this.btnIncrease.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnIncrease.FlatAppearance.BorderSize = 0;
-            this.btnIncrease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIncrease.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncrease.ForeColor = System.Drawing.Color.White;
-            this.btnIncrease.Location = new System.Drawing.Point(123, 3);
-            this.btnIncrease.Name = "btnIncrease";
-            this.btnIncrease.Size = new System.Drawing.Size(33, 31);
-            this.btnIncrease.TabIndex = 2;
-            this.btnIncrease.Text = "+";
-            this.btnIncrease.UseVisualStyleBackColor = false;
-            // 
-            // btnDecrease
-            // 
-            this.btnDecrease.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnDecrease.FlatAppearance.BorderSize = 0;
-            this.btnDecrease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDecrease.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDecrease.ForeColor = System.Drawing.Color.White;
-            this.btnDecrease.Location = new System.Drawing.Point(84, 3);
-            this.btnDecrease.Name = "btnDecrease";
-            this.btnDecrease.Size = new System.Drawing.Size(33, 31);
-            this.btnDecrease.TabIndex = 2;
-            this.btnDecrease.Text = "-";
-            this.btnDecrease.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 107);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 23);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Total Price:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(148, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 23);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "00";
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 44);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(239, 7);
+            this.panel8.TabIndex = 5;
             // 
             // btnAdd
             // 
@@ -224,35 +186,76 @@
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add To Cart";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // panel8
+            // lblPrice
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 44);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(239, 7);
-            this.panel8.TabIndex = 5;
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(148, 107);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(32, 23);
+            this.lblPrice.TabIndex = 0;
+            this.lblPrice.Text = "00";
             // 
-            // label13
+            // label2
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(6, 65);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(94, 23);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "Quantity:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 107);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Total Price:";
             // 
-            // label12
+            // panel7
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(148, 65);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(32, 23);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "00";
+            this.panel7.Controls.Add(this.btnDecrease);
+            this.panel7.Controls.Add(this.btnIncrease);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 7);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(239, 37);
+            this.panel7.TabIndex = 4;
+            // 
+            // btnDecrease
+            // 
+            this.btnDecrease.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnDecrease.FlatAppearance.BorderSize = 0;
+            this.btnDecrease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDecrease.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDecrease.ForeColor = System.Drawing.Color.White;
+            this.btnDecrease.Location = new System.Drawing.Point(84, 3);
+            this.btnDecrease.Name = "btnDecrease";
+            this.btnDecrease.Size = new System.Drawing.Size(33, 31);
+            this.btnDecrease.TabIndex = 2;
+            this.btnDecrease.Text = "-";
+            this.btnDecrease.UseVisualStyleBackColor = false;
+            this.btnDecrease.Click += new System.EventHandler(this.btnDecrease_Click);
+            // 
+            // btnIncrease
+            // 
+            this.btnIncrease.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnIncrease.FlatAppearance.BorderSize = 0;
+            this.btnIncrease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIncrease.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncrease.ForeColor = System.Drawing.Color.White;
+            this.btnIncrease.Location = new System.Drawing.Point(123, 3);
+            this.btnIncrease.Name = "btnIncrease";
+            this.btnIncrease.Size = new System.Drawing.Size(33, 31);
+            this.btnIncrease.TabIndex = 2;
+            this.btnIncrease.Text = "+";
+            this.btnIncrease.UseVisualStyleBackColor = false;
+            this.btnIncrease.Click += new System.EventHandler(this.btnIncrease_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(239, 7);
+            this.panel6.TabIndex = 4;
             // 
             // lblNameText
             // 
@@ -410,11 +413,11 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblQty;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnDecrease;

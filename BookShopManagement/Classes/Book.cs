@@ -21,7 +21,6 @@ namespace BookShopManagement.Classes
         public string Author { get; protected set; }
         public string Publisher { get; protected set; }
         public int Page { get; protected set; }
-
         public Book(int Id, string Name, double Price, int Quantity, string Picture, string ISBN, string Author, string Publisher, int Page)
         {
             this.ISBN = ISBN;

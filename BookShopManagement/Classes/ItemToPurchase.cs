@@ -13,9 +13,9 @@ namespace BookShopManagement.Classes
 {
     class ItemToPurchase
     {
-        public Product Product { get; protected set; }
-        public int Quantity { get; protected set; }
-
+        public Product Product { get; set; }
+        public int Quantity { get; set; }
+        public ItemToPurchase() { }
         public ItemToPurchase(Product Product,int Quantity)
         {
             this.Product = Product;
