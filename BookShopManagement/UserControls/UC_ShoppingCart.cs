@@ -22,8 +22,6 @@ namespace BookShopManagement.UserControls
         {
             InitializeComponent();
         }
-
-
         private void UC_ShoppingCart_Load(object sender, EventArgs e)
         {
            // pnlHeaders.Dock = DockStyle.Top;
@@ -33,30 +31,30 @@ namespace BookShopManagement.UserControls
 
         private void LoadItems(bool clear = false)
         {
+            double total = 0;
             if (clear)
             {
                 pnlCart.Controls.Clear();
-            }            
-
+            }
             for (var i= 0;i < Classes.ShoppingCart.Instance.ItemsToPurchase.Count;i++)
             {
                 Classes.ItemToPurchase item = new Classes.ItemToPurchase();
                 item = (Classes.ItemToPurchase)Classes.ShoppingCart.Instance.ItemsToPurchase[i];
-
-               // pnlHeaders.Dock = DockStyle.Top;
+                total += (item.Quantity * item.Product.Price);
                 UC_ShoppingCartItem product = new UC_ShoppingCartItem(item);
                 product.Dock = DockStyle.Top;
                 pnlCart.Controls.Add(product);
             }
             pnlCart.Controls.Add(pnlHeaders);
             pnlHeaders.Dock = DockStyle.Top;
-
+            lblTotal.Text = total.ToString() + " €";
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             Classes.ShoppingCart.Instance.RemoveProduct(true);
             pnlCart.Controls.Clear();
+            lblTotal.Text = "0 €";
             pnlHeaders.Dock = DockStyle.Top;
             pnlCart.Controls.Add(pnlHeaders);
         }

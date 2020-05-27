@@ -33,7 +33,8 @@ namespace BookShopManagement.UserControls
         private void btnDelete_Click(object sender, EventArgs e)
         {            
             Classes.ShoppingCart.Instance.RemoveProduct(item);
-           // UC_ShoppingCart.LoadItems(true);
+            UC_ShoppingCart sc = new UC_ShoppingCart();
+            // UC_ShoppingCart.LoadItems(true);
         }
     }
 }

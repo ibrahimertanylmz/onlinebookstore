@@ -37,14 +37,14 @@ namespace BookShopManagement.UserControls
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnClear = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.btnAddNewBooks = new System.Windows.Forms.Button();
             this.pnlCart = new System.Windows.Forms.Panel();
             this.pnlHeaders = new System.Windows.Forms.Panel();
             this.lblProductName = new System.Windows.Forms.Label();
-            this.lblTotalPrice = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblQuantity = new System.Windows.Forms.Label();
+            this.lblSubTotalText = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.pnlCart.SuspendLayout();
             this.pnlHeaders.SuspendLayout();
@@ -80,9 +80,10 @@ namespace BookShopManagement.UserControls
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel5.Controls.Add(this.lblTotal);
+            this.panel5.Controls.Add(this.lblSubTotalText);
             this.panel5.Controls.Add(this.btnClear);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.button2);
             this.panel5.Controls.Add(this.btnAddNewBooks);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(10, 10);
@@ -99,7 +100,7 @@ namespace BookShopManagement.UserControls
             this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.Image")));
-            this.btnClear.Location = new System.Drawing.Point(388, 0);
+            this.btnClear.Location = new System.Drawing.Point(233, 0);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(155, 67);
             this.btnClear.TabIndex = 5;
@@ -121,24 +122,6 @@ namespace BookShopManagement.UserControls
             this.label5.TabIndex = 4;
             this.label5.Text = "          Shopping Cart";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(233, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(155, 67);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "   Delete";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // btnAddNewBooks
             // 
@@ -169,9 +152,8 @@ namespace BookShopManagement.UserControls
             // 
             // pnlHeaders
             // 
-            this.pnlHeaders.BackColor = System.Drawing.Color.MediumBlue;
+            this.pnlHeaders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.pnlHeaders.Controls.Add(this.lblProductName);
-            this.pnlHeaders.Controls.Add(this.lblTotalPrice);
             this.pnlHeaders.Controls.Add(this.lblPrice);
             this.pnlHeaders.Controls.Add(this.lblQuantity);
             this.pnlHeaders.Dock = System.Windows.Forms.DockStyle.Top;
@@ -184,32 +166,23 @@ namespace BookShopManagement.UserControls
             // 
             this.lblProductName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblProductName.AutoSize = true;
+            this.lblProductName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductName.ForeColor = System.Drawing.Color.White;
-            this.lblProductName.Location = new System.Drawing.Point(435, 3);
+            this.lblProductName.Location = new System.Drawing.Point(496, 3);
             this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(58, 21);
+            this.lblProductName.Size = new System.Drawing.Size(58, 19);
             this.lblProductName.TabIndex = 3;
             this.lblProductName.Text = "Name";
-            // 
-            // lblTotalPrice
-            // 
-            this.lblTotalPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTotalPrice.AutoSize = true;
-            this.lblTotalPrice.ForeColor = System.Drawing.Color.White;
-            this.lblTotalPrice.Location = new System.Drawing.Point(904, 3);
-            this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Size = new System.Drawing.Size(19, 21);
-            this.lblTotalPrice.TabIndex = 2;
-            this.lblTotalPrice.Text = "$";
             // 
             // lblPrice
             // 
             this.lblPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.ForeColor = System.Drawing.Color.White;
-            this.lblPrice.Location = new System.Drawing.Point(753, 3);
+            this.lblPrice.Location = new System.Drawing.Point(829, 3);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(47, 21);
+            this.lblPrice.Size = new System.Drawing.Size(47, 19);
             this.lblPrice.TabIndex = 1;
             this.lblPrice.Text = "Price";
             // 
@@ -217,12 +190,37 @@ namespace BookShopManagement.UserControls
             // 
             this.lblQuantity.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity.ForeColor = System.Drawing.Color.White;
-            this.lblQuantity.Location = new System.Drawing.Point(6, 3);
+            this.lblQuantity.Location = new System.Drawing.Point(54, 3);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(39, 21);
+            this.lblQuantity.Size = new System.Drawing.Size(35, 19);
             this.lblQuantity.TabIndex = 0;
             this.lblQuantity.Text = "Qty";
+            // 
+            // lblSubTotalText
+            // 
+            this.lblSubTotalText.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblSubTotalText.AutoSize = true;
+            this.lblSubTotalText.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubTotalText.ForeColor = System.Drawing.Color.White;
+            this.lblSubTotalText.Location = new System.Drawing.Point(428, 24);
+            this.lblSubTotalText.Name = "lblSubTotalText";
+            this.lblSubTotalText.Size = new System.Drawing.Size(78, 19);
+            this.lblSubTotalText.TabIndex = 4;
+            this.lblSubTotalText.Text = "SubTotal:";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
+            this.lblTotal.Location = new System.Drawing.Point(522, 24);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(31, 19);
+            this.lblTotal.TabIndex = 4;
+            this.lblTotal.Text = "0 €";
             // 
             // UC_ShoppingCart
             // 
@@ -238,6 +236,7 @@ namespace BookShopManagement.UserControls
             this.Size = new System.Drawing.Size(985, 580);
             this.Load += new System.EventHandler(this.UC_ShoppingCart_Load);
             this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.pnlCart.ResumeLayout(false);
             this.pnlHeaders.ResumeLayout(false);
             this.pnlHeaders.PerformLayout();
@@ -254,7 +253,6 @@ namespace BookShopManagement.UserControls
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnAddNewBooks;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Panel pnlCart;
@@ -262,6 +260,7 @@ namespace BookShopManagement.UserControls
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label lblQuantity;
         private System.Windows.Forms.Label lblProductName;
-        private System.Windows.Forms.Label lblTotalPrice;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblSubTotalText;
     }
 }

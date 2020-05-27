@@ -163,12 +163,34 @@ namespace BookShopManagement.UserControls
         {
             try
             {
+                int found = 0;
                 if (item.Product.Name != "")
                 {
-                    ShoppingCart.Instance.AddProduct(item);
-                    item.Quantity = 1;
-                    lblQty.Text = item.Quantity.ToString();
-                    lblPrice.Text = (item.Quantity * item.Product.Price).ToString() + " €";
+                    ItemToPurchase itemtoadd = new ItemToPurchase();
+                    itemtoadd.Product = item.Product;
+                    itemtoadd.Quantity = item.Quantity;
+                    for (var i = 0; i < Classes.ShoppingCart.Instance.ItemsToPurchase.Count; i++)
+                    {
+                        Classes.ItemToPurchase listitem = new Classes.ItemToPurchase();
+                        listitem = (Classes.ItemToPurchase)Classes.ShoppingCart.Instance.ItemsToPurchase[i];
+                        if (listitem.Product.Id == itemtoadd.Product.Id)
+                        {
+                            listitem.Quantity += itemtoadd.Quantity;
+                            item.Quantity = 1;
+                            found = 1;
+                            lblQty.Text = item.Quantity.ToString();
+                            lblPrice.Text = (item.Quantity * item.Product.Price).ToString() + " €";
+                            break;
+
+                        }
+                    }
+                    if (found == 0)
+                    {
+                        ShoppingCart.Instance.AddProduct(itemtoadd);
+                        item.Quantity = 1;
+                        lblQty.Text = item.Quantity.ToString();
+                        lblPrice.Text = (item.Quantity * item.Product.Price).ToString() + " €";
+                    }
                 }
             }
             catch (Exception) { };
