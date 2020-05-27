@@ -3,8 +3,9 @@
  * @date
  * 
  * @edited_by Enes Solak 25.05.2020
- */ 
- 
+ */
+
+using BookShopManagement.Components;
 using BookShopManagement.Forms;
 using System;
 using System.Collections.Generic;
