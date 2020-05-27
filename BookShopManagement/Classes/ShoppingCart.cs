@@ -20,8 +20,8 @@ namespace BookShopManagement.Classes
         public string CustomerId { get; protected set; }
 
         public  ArrayList ItemsToPurchase = new ArrayList();
-        public double PaymentAmount { get; protected set; }
-        public int PaymentType { get; protected set; } //0 for cash, 1 for creditcard      
+        public double PaymentAmount { get; set; }
+        public int PaymentType { get; set; } //0 for cash, 1 for creditcard      
 
         public void AddProduct(ItemToPurchase itemToPurchase) 
         {

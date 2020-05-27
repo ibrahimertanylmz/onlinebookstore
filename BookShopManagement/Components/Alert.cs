@@ -37,7 +37,8 @@ namespace BookShopManagement.Components
             Success,
             Warning,
             Error,
-            Info
+            Info,
+            Added
         }
 
         private Action action;
@@ -117,6 +118,12 @@ namespace BookShopManagement.Components
                     this.pbxIcon.Image = Resources.warning;
                     this.BackColor = Color.FromArgb(243, 156, 18);
                     break;
+                case Type.Added:
+                    this.pbxIcon.Image = Resources.success;
+                    this.BackColor = Color.FromArgb(39, 174, 96);
+                    this.Location = new Point(this.x, this.y - 590);
+                    break;
+
             }
 
             lblMsg.Text = msg;
