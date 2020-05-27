@@ -1,7 +1,9 @@
 ﻿/**
  * @author İbrahim Ertan Yılmaz  
  * @date 25.05.2020
- */
+ * 
+ * @edited_by Kumbukani Kamanga 26.05.2020 
+*/
 
 using System;
 using System.Collections;
@@ -17,11 +19,11 @@ namespace BookShopManagement.Classes
         public static ShoppingCart Instance { get; private set; } = new ShoppingCart();
         public string CustomerId { get; protected set; }
 
-        public ArrayList ItemsToPurchase = new ArrayList();
+        public  ArrayList ItemsToPurchase = new ArrayList();
         public double PaymentAmount { get; protected set; }
         public int PaymentType { get; protected set; } //0 for cash, 1 for creditcard      
 
-        public void AddProduct(ItemToPurchase itemToPurchase)
+        public void AddProduct(ItemToPurchase itemToPurchase) 
         {
             ItemsToPurchase.Add(itemToPurchase);
         }
@@ -29,6 +31,13 @@ namespace BookShopManagement.Classes
         public void RemoveProduct(ItemToPurchase itemToPurchase)
         {
             ItemsToPurchase.Remove(itemToPurchase);
+        }
+        public void RemoveProduct(bool removeAll)
+        {
+            if (removeAll)
+            {
+                ItemsToPurchase.Clear();
+            }
         }
 
         public void PlaceOrder() { }

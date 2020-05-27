@@ -1,6 +1,7 @@
 ﻿/**
  * @author İbrahim Ertan Yılmaz  
  * @date 25.05.2020
+ * 
  */
 
 using System;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace BookShopManagement.Classes
 {
-    class ItemToPurchase
+    public class ItemToPurchase
     {
         public Product Product { get; set; }
         public int Quantity { get; set; }
