@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BookShopManagement.Classes;
+using BookShopManagement.Components;
 
 namespace BookShopManagement.UserControls
 {
@@ -28,11 +29,11 @@ namespace BookShopManagement.UserControls
             try
             {
                 Session.Instance.Customer.Update(txtFirstname.Text, txtLastname.Text, txtAddress.Text, mskPhone.Text, txtEmail.Text, txtUserName.Text, password);
-                MessageBox.Show("Your informations are updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Alert.Create("Your informations are updated!", Alert.Type.Success);
             }
             catch (Exception)
             {
-                MessageBox.Show("Something went wrong.Please try again!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Alert.Create("Something went wrong. Please try again!", Alert.Type.Error);
             }
         }
 

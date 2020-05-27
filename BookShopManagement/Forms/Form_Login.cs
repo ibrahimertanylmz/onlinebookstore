@@ -46,10 +46,12 @@ namespace BookShopManagement
                 {
                     fd.ShowDialog();
                 }
+
+                Alert.Create("Logged in successfully.", Alert.Type.Success);
             }
             else
             {
-                MessageBox.Show("Username or Password is wrong.Please try again!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Alert.Create("Username or Password is wrong.", Alert.Type.Error);
             }
         }
 
