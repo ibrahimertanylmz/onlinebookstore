@@ -125,6 +125,12 @@
     <Compile Include="UserControls\UC_Music.Designer.cs">
       <DependentUpon>UC_Music.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_ShoppingCartItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_ShoppingCartItem.Designer.cs">
+      <DependentUpon>UC_ShoppingCartItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils.cs" />
     <EmbeddedResource Include="Forms\Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Music.resx">
       <DependentUpon>UC_Music.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_ShoppingCartItem.resx">
+      <DependentUpon>UC_ShoppingCartItem.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -1,4 +1,9 @@
-﻿using System;
+﻿/**
+ * @author Kumbukani KAMANGA
+ * @date 26.05.2020
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -16,6 +21,44 @@ namespace BookShopManagement.UserControls
         public UC_ShoppingCart()
         {
             InitializeComponent();
+        }
+
+
+        private void UC_ShoppingCart_Load(object sender, EventArgs e)
+        {
+           // pnlHeaders.Dock = DockStyle.Top;
+            LoadItems(true);
+           
+        }
+
+        private void LoadItems(bool clear = false)
+        {
+            if (clear)
+            {
+                pnlCart.Controls.Clear();
+            }            
+
+            for (var i= 0;i < Classes.ShoppingCart.Instance.ItemsToPurchase.Count;i++)
+            {
+                Classes.ItemToPurchase item = new Classes.ItemToPurchase();
+                item = (Classes.ItemToPurchase)Classes.ShoppingCart.Instance.ItemsToPurchase[i];
+
+               // pnlHeaders.Dock = DockStyle.Top;
+                UC_ShoppingCartItem product = new UC_ShoppingCartItem(item);
+                product.Dock = DockStyle.Top;
+                pnlCart.Controls.Add(product);
+            }
+            pnlCart.Controls.Add(pnlHeaders);
+            pnlHeaders.Dock = DockStyle.Top;
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Classes.ShoppingCart.Instance.RemoveProduct(true);
+            pnlCart.Controls.Clear();
+            pnlHeaders.Dock = DockStyle.Top;
+            pnlCart.Controls.Add(pnlHeaders);
         }
     }
 }
