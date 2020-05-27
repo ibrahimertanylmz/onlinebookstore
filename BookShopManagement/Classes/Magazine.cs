@@ -30,6 +30,7 @@ namespace BookShopManagement.Classes
             this.Type = Type;
             this.Page = Page;
             this.Publisher = Publisher;
+            this.Picture = Picture;
         }
 
         public static Magazine CreateFromID(int ID)
