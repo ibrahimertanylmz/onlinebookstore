@@ -3,8 +3,9 @@
  * @date
  * 
  * @edited_by Enes Solak 25.05.2020
- */ 
+ */
 
+using BookShopManagement.Components;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,13 +43,13 @@ namespace BookShopManagement.Forms
                 string phone = mskPhone.Text;
 
                 Auth.Instance.Register(name, address, email, username, password, phone);
-
-                MessageBox.Show("Congratulations new register!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                Alert.Create("Congratulations new register!", Alert.Type.Success);
                 this.Hide();
             }
             catch (Exception)
             {
-                MessageBox.Show("Something went wrong! Please try again", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Alert.Create("Something went wrong. Please try again", Alert.Type.Error);
             }
         }
     }
