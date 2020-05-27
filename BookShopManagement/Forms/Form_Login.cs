@@ -37,21 +37,28 @@ namespace BookShopManagement
             string username = txtUserName.Text;
             string password = txtPassword.Text;
 
-            if (Auth.Instance.Login(username, password))
+            try
             {
-                txtUserName.Text = "";
-                txtPassword.Text = "";
-
-                using (Form_Dashboard fd = new Form_Dashboard())
+                if (Auth.Instance.Login(username, password))
                 {
-                    fd.ShowDialog();
-                }
+                    txtUserName.Text = "";
+                    txtPassword.Text = "";
 
-                Alert.Create("Logged in successfully.", Alert.Type.Success);
+                    Alert.Create("Logged in successfully.", Alert.Type.Success);
+
+                    using (Form_Dashboard fd = new Form_Dashboard())
+                    {
+                        fd.ShowDialog();
+                    }
+                }
+                else
+                {
+                    Alert.Create("Username or Password is wrong.", Alert.Type.Error);
+                }
             }
-            else
+            catch (Exception)
             {
-                Alert.Create("Username or Password is wrong.", Alert.Type.Error);
+                Alert.Create("Didnt connect to database.", Alert.Type.Error);
             }
         }
 

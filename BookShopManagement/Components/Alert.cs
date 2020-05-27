@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,6 +17,12 @@ namespace BookShopManagement.Components
         public Alert()
         {
             InitializeComponent();
+        }
+
+        public Alert(string msg, Type type)
+        {
+            InitializeComponent();
+            this.ShowAlert(msg, type);
         }
 
         public enum Action
@@ -57,8 +64,8 @@ namespace BookShopManagement.Components
                     this.Opacity -= 0.1;
 
                     this.Left -= 3;
-                    if (base.Opacity == 0.0)
-                        base.Close();
+                    if (this.Opacity == 0.0)
+                        this.Close();
                     break;
             }
         }
@@ -122,8 +129,8 @@ namespace BookShopManagement.Components
 
         public static void Create(string msg, Type type)
         {
-            Alert alert = new Alert();
-            alert.ShowAlert(msg, type);
+            var t = new Thread(() => Application.Run(new Alert(msg, type)));
+            t.Start();
         }
     }
 }
