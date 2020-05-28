@@ -107,6 +107,12 @@
     <Compile Include="UserControls\UC_Home.Designer.cs">
       <DependentUpon>UC_Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_OrderSuccessful.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_OrderSuccessful.Designer.cs">
+      <DependentUpon>UC_OrderSuccessful.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_Payment.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     <EmbeddedResource Include="UserControls\UC_Home.resx">
       <DependentUpon>UC_Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_OrderSuccessful.resx">
+      <DependentUpon>UC_OrderSuccessful.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Payment.resx">
       <DependentUpon>UC_Payment.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,6 +235,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qcBBexbc5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

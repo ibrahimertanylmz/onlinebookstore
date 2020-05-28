@@ -17,6 +17,7 @@ namespace BookShopManagement.Forms
         {
             InitializeComponent();
             rbCard.Checked = true;
+            Console.WriteLine("Button Pressed");
         }
 
         private void btnpayment_Click(object sender, EventArgs e)
@@ -25,10 +26,13 @@ namespace BookShopManagement.Forms
             {
                 if (rbCard.Checked)
                 {
+                    UC_Payment ucp = new UC_Payment();
+                    AddControlsToPanel(ucp);
                 }
                 else
                 {
-
+                    UC_OrderSuccessful uco = new UC_OrderSuccessful();
+                    AddControlsToPanel(uco);
                 }
             }
         }
@@ -42,6 +46,17 @@ namespace BookShopManagement.Forms
             {
                 btnpayment.Text = "Proceed To Payment...";
             }
+        }
+        private void AddControlsToPanel(Control c)
+        {
+            c.Dock = DockStyle.Fill;
+            panelCheckout.Controls.Clear();
+            panelCheckout.Controls.Add(c);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

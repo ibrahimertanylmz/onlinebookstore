@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BookShopManagement.Classes;
+using BookShopManagement.UserControls;
 
 namespace BookShopManagement.UserControls
 {
@@ -17,6 +18,21 @@ namespace BookShopManagement.UserControls
         {
             InitializeComponent();
             lblPrice.Text = ShoppingCart.Instance.PaymentAmount.ToString() + " €";
+        }
+
+        private void btnpayment_Click(object sender, EventArgs e)
+        {
+            if(txtName.Text != "" && mskCardNo.MaskCompleted && mskCVV.MaskCompleted && mskDate.MaskCompleted)
+            {
+                UC_OrderSuccessful uco = new UC_OrderSuccessful();
+                AddControlsToPanel(uco);
+            }
+        }
+        private void AddControlsToPanel(Control c)
+        {
+            c.Dock = DockStyle.Fill;
+            panelCard.Controls.Clear();
+            panelCard.Controls.Add(c);
         }
     }
 }
