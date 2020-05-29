@@ -46,6 +46,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.mskPhone = new System.Windows.Forms.MaskedTextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -172,7 +174,7 @@
             // 
             this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtName.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(330, 152);
+            this.txtName.Location = new System.Drawing.Point(330, 93);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(547, 31);
             this.txtName.TabIndex = 1;
@@ -195,7 +197,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label5.Location = new System.Drawing.Point(326, 125);
+            this.label5.Location = new System.Drawing.Point(326, 66);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 21);
             this.label5.TabIndex = 15;
@@ -244,12 +246,35 @@
             this.mskPhone.Size = new System.Drawing.Size(547, 31);
             this.mskPhone.TabIndex = 4;
             // 
+            // txtSurname
+            // 
+            this.txtSurname.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSurname.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSurname.Location = new System.Drawing.Point(330, 164);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(547, 31);
+            this.txtSurname.TabIndex = 23;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.label8.Location = new System.Drawing.Point(326, 137);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(83, 21);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Surname:";
+            // 
             // Form_Register
             // 
             this.AcceptButton = this.btnregister;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1164, 681);
+            this.Controls.Add(this.txtSurname);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.mskPhone);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtEmail);
@@ -295,5 +320,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox mskPhone;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.Label label8;
     }
 }

@@ -36,13 +36,14 @@ namespace BookShopManagement.Forms
             try
             {
                 string name = txtName.Text;
+                string surname = txtSurname.Text;
                 string address = txtAdress.Text;
                 string email = txtEmail.Text;
                 string username = txtUserName.Text;
                 string password = txtPassword.Text;
                 string phone = mskPhone.Text;
 
-                Auth.Instance.Register(name, address, email, username, password, phone);
+                Auth.Instance.Register(name,surname, address, email, username, password, phone);
                 
                 Alert.Create("Congratulations new register!", Alert.Type.Success);
                 this.Hide();
