@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BookShopManagement.Forms;
+using BookShopManagement.Classes;
 
 namespace BookShopManagement.UserControls
 {
@@ -47,6 +48,7 @@ namespace BookShopManagement.UserControls
             }
             pnlCart.Controls.Add(pnlHeaders);
             pnlHeaders.Dock = DockStyle.Top;
+            ShoppingCart.Instance.PaymentAmount = total;
             lblTotal.Text = total.ToString() + " €";
         }
 
@@ -57,6 +59,14 @@ namespace BookShopManagement.UserControls
             lblTotal.Text = "0 €";
             pnlHeaders.Dock = DockStyle.Top;
             pnlCart.Controls.Add(pnlHeaders);
+        }
+
+        private void btnAddNewBooks_Click(object sender, EventArgs e)
+        {
+            using (Form_Checkout fch = new Form_Checkout())
+            {
+                fch.ShowDialog();
+            }
         }
     }
 }

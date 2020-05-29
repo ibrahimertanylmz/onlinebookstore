@@ -102,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
+            this.BackColor = System.Drawing.Color.RoyalBlue;
             this.Controls.Add(this.lblQuantity);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.lblPrice);

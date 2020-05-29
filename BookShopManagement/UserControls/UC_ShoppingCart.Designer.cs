@@ -35,6 +35,8 @@ namespace BookShopManagement.UserControls
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblSubTotalText = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAddNewBooks = new System.Windows.Forms.Button();
@@ -43,8 +45,6 @@ namespace BookShopManagement.UserControls
             this.lblProductName = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblQuantity = new System.Windows.Forms.Label();
-            this.lblSubTotalText = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.pnlCart.SuspendLayout();
             this.pnlHeaders.SuspendLayout();
@@ -90,6 +90,30 @@ namespace BookShopManagement.UserControls
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(965, 67);
             this.panel5.TabIndex = 9;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
+            this.lblTotal.Location = new System.Drawing.Point(522, 24);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(31, 19);
+            this.lblTotal.TabIndex = 4;
+            this.lblTotal.Text = "0 €";
+            // 
+            // lblSubTotalText
+            // 
+            this.lblSubTotalText.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblSubTotalText.AutoSize = true;
+            this.lblSubTotalText.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubTotalText.ForeColor = System.Drawing.Color.White;
+            this.lblSubTotalText.Location = new System.Drawing.Point(428, 24);
+            this.lblSubTotalText.Name = "lblSubTotalText";
+            this.lblSubTotalText.Size = new System.Drawing.Size(78, 19);
+            this.lblSubTotalText.TabIndex = 4;
+            this.lblSubTotalText.Text = "SubTotal:";
             // 
             // btnClear
             // 
@@ -139,6 +163,7 @@ namespace BookShopManagement.UserControls
             this.btnAddNewBooks.Text = "   Checkout";
             this.btnAddNewBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddNewBooks.UseVisualStyleBackColor = true;
+            this.btnAddNewBooks.Click += new System.EventHandler(this.btnAddNewBooks_Click);
             // 
             // pnlCart
             // 
@@ -197,30 +222,6 @@ namespace BookShopManagement.UserControls
             this.lblQuantity.Size = new System.Drawing.Size(35, 19);
             this.lblQuantity.TabIndex = 0;
             this.lblQuantity.Text = "Qty";
-            // 
-            // lblSubTotalText
-            // 
-            this.lblSubTotalText.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblSubTotalText.AutoSize = true;
-            this.lblSubTotalText.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubTotalText.ForeColor = System.Drawing.Color.White;
-            this.lblSubTotalText.Location = new System.Drawing.Point(428, 24);
-            this.lblSubTotalText.Name = "lblSubTotalText";
-            this.lblSubTotalText.Size = new System.Drawing.Size(78, 19);
-            this.lblSubTotalText.TabIndex = 4;
-            this.lblSubTotalText.Text = "SubTotal:";
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.ForeColor = System.Drawing.Color.White;
-            this.lblTotal.Location = new System.Drawing.Point(522, 24);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(31, 19);
-            this.lblTotal.TabIndex = 4;
-            this.lblTotal.Text = "0 €";
             // 
             // UC_ShoppingCart
             // 
