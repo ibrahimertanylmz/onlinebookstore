@@ -225,11 +225,6 @@ namespace BookShopManagement.UserControls
             this.lblQuantity.TabIndex = 0;
             this.lblQuantity.Text = "Qty";
             // 
-            // tmrDelete
-            // 
-            this.tmrDelete.Interval = 10;
-            this.tmrDelete.Tick += new System.EventHandler(this.tmrDelete_Tick);
-            // 
             // UC_ShoppingCart
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
