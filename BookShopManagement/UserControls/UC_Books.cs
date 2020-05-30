@@ -17,6 +17,7 @@ using System.Windows.Forms;
 using BookShopManagement.Forms;
 using System.Data.SqlClient;
 using BookShopManagement.Classes;
+using BookShopManagement.Components;
 
 namespace BookShopManagement.UserControls
 {
@@ -196,6 +197,7 @@ namespace BookShopManagement.UserControls
                         lblQty.Text = item.Quantity.ToString();
                         lblPrice.Text = (item.Quantity * item.Product.Price).ToString() + " €";
                     }
+                    Alert.Create("Item Added To Cart", Alert.Type.Added);
                 }
             }
             catch (Exception) { };

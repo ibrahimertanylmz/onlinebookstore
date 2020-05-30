@@ -22,7 +22,7 @@ namespace BookShopManagement.Forms
 
         private void btnpayment_Click(object sender, EventArgs e)
         {
-            if (txtName.Text !="" && txtAdress.Text !="" && txtHouseNo.Text !="" &&txtCity.Text != "" && mskPhone.MaskCompleted)
+            if (txtName.Text != "" && txtAdress.Text != "" && txtHouseNo.Text != "" && txtCity.Text != "" && mskPhone.MaskCompleted)
             {
                 if (rbCard.Checked)
                 {
@@ -33,6 +33,49 @@ namespace BookShopManagement.Forms
                 {
                     UC_OrderSuccessful uco = new UC_OrderSuccessful();
                     AddControlsToPanel(uco);
+                }
+            }
+            else
+            {
+                if (txtName.Text == "")
+                {
+                    lblNameText.ForeColor = Color.FromArgb(255, 0, 0);
+                }
+                else
+                {
+                    lblNameText.ForeColor = Color.FromArgb(0, 71, 160);
+                }
+                if (txtAdress.Text == "")
+                {
+                    lblAddressText.ForeColor = Color.FromArgb(255, 0, 0);
+                }
+                else
+                {
+                    lblAddressText.ForeColor = Color.FromArgb(0, 71, 160);
+                }
+                if (txtHouseNo.Text == "")
+                {
+                    lblHouseText.ForeColor = Color.FromArgb(255, 0, 0);
+                }
+                else
+                {
+                    lblHouseText.ForeColor = Color.FromArgb(0, 71, 160);
+                }
+                if (txtCity.Text == "")
+                {
+                    lblCityText.ForeColor = Color.FromArgb(255, 0, 0);
+                }
+                else
+                {
+                    lblCityText.ForeColor = Color.FromArgb(0, 71, 160);
+                }
+                if (!mskPhone.MaskCompleted)
+                {
+                    lblPhoneText.ForeColor = Color.FromArgb(255, 0, 0);
+                }
+                else
+                {
+                    lblPhoneText.ForeColor = Color.FromArgb(0, 71, 160);
                 }
             }
         }
@@ -47,7 +90,7 @@ namespace BookShopManagement.Forms
                 btnpayment.Text = "Proceed To Payment...";
             }
         }
-        private void AddControlsToPanel(Control c)
+        public void AddControlsToPanel(Control c)
         {
             c.Dock = DockStyle.Fill;
             panelCheckout.Controls.Clear();

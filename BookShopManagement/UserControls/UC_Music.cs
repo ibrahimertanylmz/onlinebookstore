@@ -191,8 +191,8 @@ namespace BookShopManagement.UserControls
                         lblQty.Text = item.Quantity.ToString();
                         lblPrice.Text = (item.Quantity * item.Product.Price).ToString() + " €";
                     }
+                    Alert.Create("Item Added To Cart", Alert.Type.Added);
                 }
-                Alert.Create("Item Added To Cart", Alert.Type.Added);
             }
             catch (Exception) { };
         }
