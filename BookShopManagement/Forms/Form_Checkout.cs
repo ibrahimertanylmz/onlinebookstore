@@ -1,4 +1,12 @@
-﻿using System;
+﻿/**
+ * @author Ahmad ZAIDAN
+ * @date 25.05.2020
+ * 
+ * @edited_by Kumbukani Kamanga 26.05.2020 
+*/
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +16,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BookShopManagement.UserControls;
+using BookShopManagement.Classes;
 
 namespace BookShopManagement.Forms
 {
@@ -99,7 +108,13 @@ namespace BookShopManagement.Forms
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+           // this.Dispose();
+            ShoppingCart.Instance.CancelOrder();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            ShoppingCart.Instance.CancelOrder();
         }
     }
 }

@@ -30,6 +30,7 @@ namespace BookShopManagement.UserControls
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ShoppingCart));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -39,12 +40,13 @@ namespace BookShopManagement.UserControls
             this.lblSubTotalText = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnAddNewBooks = new System.Windows.Forms.Button();
+            this.btnCheckout = new System.Windows.Forms.Button();
             this.pnlCart = new System.Windows.Forms.Panel();
             this.pnlHeaders = new System.Windows.Forms.Panel();
             this.lblProductName = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblQuantity = new System.Windows.Forms.Label();
+            this.tmrDelete = new System.Windows.Forms.Timer(this.components);
             this.panel5.SuspendLayout();
             this.pnlCart.SuspendLayout();
             this.pnlHeaders.SuspendLayout();
@@ -84,7 +86,7 @@ namespace BookShopManagement.UserControls
             this.panel5.Controls.Add(this.lblSubTotalText);
             this.panel5.Controls.Add(this.btnClear);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.btnAddNewBooks);
+            this.panel5.Controls.Add(this.btnCheckout);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(10, 10);
             this.panel5.Name = "panel5";
@@ -97,11 +99,11 @@ namespace BookShopManagement.UserControls
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.White;
-            this.lblTotal.Location = new System.Drawing.Point(522, 24);
+            this.lblTotal.Location = new System.Drawing.Point(677, 24);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(31, 19);
+            this.lblTotal.Size = new System.Drawing.Size(49, 19);
             this.lblTotal.TabIndex = 4;
-            this.lblTotal.Text = "0 €";
+            this.lblTotal.Text = "€0.00";
             // 
             // lblSubTotalText
             // 
@@ -109,7 +111,7 @@ namespace BookShopManagement.UserControls
             this.lblSubTotalText.AutoSize = true;
             this.lblSubTotalText.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubTotalText.ForeColor = System.Drawing.Color.White;
-            this.lblSubTotalText.Location = new System.Drawing.Point(428, 24);
+            this.lblSubTotalText.Location = new System.Drawing.Point(583, 24);
             this.lblSubTotalText.Name = "lblSubTotalText";
             this.lblSubTotalText.Size = new System.Drawing.Size(78, 19);
             this.lblSubTotalText.TabIndex = 4;
@@ -147,23 +149,23 @@ namespace BookShopManagement.UserControls
             this.label5.Text = "          Shopping Cart";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnAddNewBooks
+            // btnCheckout
             // 
-            this.btnAddNewBooks.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddNewBooks.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnAddNewBooks.FlatAppearance.BorderSize = 0;
-            this.btnAddNewBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNewBooks.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewBooks.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewBooks.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNewBooks.Image")));
-            this.btnAddNewBooks.Location = new System.Drawing.Point(0, 0);
-            this.btnAddNewBooks.Name = "btnAddNewBooks";
-            this.btnAddNewBooks.Size = new System.Drawing.Size(233, 67);
-            this.btnAddNewBooks.TabIndex = 0;
-            this.btnAddNewBooks.Text = "   Checkout";
-            this.btnAddNewBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddNewBooks.UseVisualStyleBackColor = true;
-            this.btnAddNewBooks.Click += new System.EventHandler(this.btnAddNewBooks_Click);
+            this.btnCheckout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCheckout.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCheckout.FlatAppearance.BorderSize = 0;
+            this.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckout.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckout.ForeColor = System.Drawing.Color.White;
+            this.btnCheckout.Image = ((System.Drawing.Image)(resources.GetObject("btnCheckout.Image")));
+            this.btnCheckout.Location = new System.Drawing.Point(0, 0);
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.Size = new System.Drawing.Size(233, 67);
+            this.btnCheckout.TabIndex = 0;
+            this.btnCheckout.Text = "   Checkout";
+            this.btnCheckout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCheckout.UseVisualStyleBackColor = true;
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
             // pnlCart
             // 
@@ -223,6 +225,11 @@ namespace BookShopManagement.UserControls
             this.lblQuantity.TabIndex = 0;
             this.lblQuantity.Text = "Qty";
             // 
+            // tmrDelete
+            // 
+            this.tmrDelete.Interval = 10;
+            this.tmrDelete.Tick += new System.EventHandler(this.tmrDelete_Tick);
+            // 
             // UC_ShoppingCart
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -254,7 +261,7 @@ namespace BookShopManagement.UserControls
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnAddNewBooks;
+        private System.Windows.Forms.Button btnCheckout;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Panel pnlCart;
         private System.Windows.Forms.Panel pnlHeaders;
@@ -263,5 +270,6 @@ namespace BookShopManagement.UserControls
         private System.Windows.Forms.Label lblProductName;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label lblSubTotalText;
+        public System.Windows.Forms.Timer tmrDelete;
     }
 }

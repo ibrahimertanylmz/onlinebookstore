@@ -27,7 +27,7 @@ namespace BookShopManagement.UserControls
         {
             InitializeComponent();
             leftPanel.AutoScroll = true;
-            lblPrice.Text = "0 €";
+            lblPrice.Text = "€0.00";
             lblQty.Text = "0";
             lblName.Text = "";
             lblIssue.Text = "";
@@ -83,7 +83,7 @@ namespace BookShopManagement.UserControls
                     Location = new Point(20, 100),
                     Name = "price-" + reader["ID"].ToString(),
                     Size = new Size(145, 30),
-                    Text = reader["PRICE"].ToString() + " €"
+                    Text = "€" + reader["PRICE"].ToString() 
                 };
 
                 Button button = new Button
@@ -132,7 +132,7 @@ namespace BookShopManagement.UserControls
                 lblPublisher.Text = magazine.Publisher;
                 lblPage.Text = magazine.Page.ToString();
                 lblQty.Text = item.Quantity.ToString();
-                lblPrice.Text = (item.Quantity * item.Product.Price).ToString() + " €";
+                lblPrice.Text = "€" + (item.Quantity * item.Product.Price).ToString("0.00");  
             }
             lastbutton = int.Parse(name[1]);
         }
@@ -144,7 +144,7 @@ namespace BookShopManagement.UserControls
                 {
                     item.Quantity++;
                     lblQty.Text = item.Quantity.ToString();
-                    lblPrice.Text = (item.Quantity * item.Product.Price).ToString() + " €";
+                    lblPrice.Text = "€" + (item.Quantity * item.Product.Price).ToString("0.00");
                 }
             }
             catch (Exception) { }
@@ -155,7 +155,7 @@ namespace BookShopManagement.UserControls
             {
                 if (item.Quantity > 0) { item.Quantity--; }
                 lblQty.Text = item.Quantity.ToString();
-                lblPrice.Text = (item.Quantity * item.Product.Price).ToString() + " €";
+                lblPrice.Text = "€" + (item.Quantity * item.Product.Price).ToString("0.00");
             }
             catch (Exception) { }
         }
@@ -180,7 +180,7 @@ namespace BookShopManagement.UserControls
                             item.Quantity = 1;
                             found = 1;
                             lblQty.Text = item.Quantity.ToString();
-                            lblPrice.Text = (item.Quantity * item.Product.Price).ToString() + " €";
+                            lblPrice.Text = "€" + (item.Quantity * item.Product.Price).ToString("0.00");
                             break;
 
                         }
@@ -190,7 +190,7 @@ namespace BookShopManagement.UserControls
                         ShoppingCart.Instance.AddProduct(itemtoadd);
                         item.Quantity = 1;
                         lblQty.Text = item.Quantity.ToString();
-                        lblPrice.Text = (item.Quantity * item.Product.Price).ToString() + " €";
+                        lblPrice.Text = "€" + (item.Quantity * item.Product.Price).ToString("0.00");
                     }
                     Alert.Create("Item Added To Cart", Alert.Type.Added);
                 }
