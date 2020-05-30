@@ -164,11 +164,5 @@ namespace BookShopManagement.UserControls
         {
             ShoppingCart.PlaceOrder();
         }
-
-        private void tmrDelete_Tick(object sender, EventArgs e)
-        {
-            LoadItems(true);
-            tmrDelete.Stop();
-        }
     }
 }
