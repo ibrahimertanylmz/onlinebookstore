@@ -3,6 +3,7 @@
  * @date 25.05.2020
  * 
  * @edited_by Kumbukani Kamanga 26.05.2020 
+ * @edited_by Enes Solak 30.05.2020
 */
 
 using System;
@@ -19,7 +20,7 @@ namespace BookShopManagement.Classes
         public static ShoppingCart Instance { get; private set; } = new ShoppingCart();
         public string CustomerId { get; protected set; }
 
-        public  ArrayList ItemsToPurchase = new ArrayList();
+        public ArrayList ItemsToPurchase = new ArrayList();
         public double PaymentAmount { get; set; }
         public int PaymentType { get; set; } //0 for cash, 1 for creditcard      
 
@@ -32,11 +33,26 @@ namespace BookShopManagement.Classes
         {
             ItemsToPurchase.Remove(itemToPurchase);
         }
+
         public void RemoveProduct(bool removeAll)
         {
             if (removeAll)
             {
                 ItemsToPurchase.Clear();
+            }
+        }
+
+        public void RemoveProductById(int id)
+        {
+            int index = 0;
+            foreach (ItemToPurchase item in ItemsToPurchase)
+            {
+                if (item.Product.Id == id)
+                {
+                    ItemsToPurchase.RemoveAt(index);
+                    break;
+                }
+                index++;
             }
         }
 

@@ -49,7 +49,7 @@ namespace BookShopManagement.Components
             switch (action)
             {
                 case Action.wait:
-                    timer.Interval = 5000;
+                    timer.Interval = 2500;
                     action = Action.close;
                     break;
                 case Action.start:
