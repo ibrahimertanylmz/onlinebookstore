@@ -26,6 +26,7 @@ namespace BookShopManagement.UserControls
             {
                 UC_OrderSuccessful uco = new UC_OrderSuccessful();
                 AddControlsToPanel(uco);
+                ShoppingCart.Instance.SendInvoicebyEmail();
             }
             else
             {
