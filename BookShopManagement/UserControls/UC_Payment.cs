@@ -27,6 +27,41 @@ namespace BookShopManagement.UserControls
                 UC_OrderSuccessful uco = new UC_OrderSuccessful();
                 AddControlsToPanel(uco);
             }
+            else
+            {
+                if (txtName.Text == "")
+                {
+                    lblNameText.ForeColor = Color.FromArgb(255, 0, 0);
+                }
+                else
+                {
+                    lblNameText.ForeColor = Color.FromArgb(0, 71, 160);
+                }
+                if (!mskCardNo.MaskCompleted)
+                {
+                    lblCardNoText.ForeColor = Color.FromArgb(255, 0, 0);
+                }
+                else
+                {
+                    lblCardNoText.ForeColor = Color.FromArgb(0, 71, 160);
+                }
+                if (!mskCVV.MaskCompleted)
+                {
+                    lblCVVText.ForeColor = Color.FromArgb(255, 0, 0);
+                }
+                else
+                {
+                    lblCVVText.ForeColor = Color.FromArgb(0, 71, 160);
+                }
+                if (!mskDate.MaskCompleted)
+                {
+                    lblExpiryText.ForeColor = Color.FromArgb(255, 0, 0);
+                }
+                else
+                {
+                    lblExpiryText.ForeColor = Color.FromArgb(0, 71, 160);
+                }
+            }
         }
         private void AddControlsToPanel(Control c)
         {

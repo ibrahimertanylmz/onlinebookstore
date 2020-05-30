@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BookShopManagement.Forms;
 using BookShopManagement.Classes;
+using BookShopManagement.Components;
 
 namespace BookShopManagement.UserControls
 {
@@ -37,10 +38,10 @@ namespace BookShopManagement.UserControls
             {
                 pnlCart.Controls.Clear();
             }
-            for (var i= 0;i < Classes.ShoppingCart.Instance.ItemsToPurchase.Count;i++)
+            for (var i= 0;i < ShoppingCart.Instance.ItemsToPurchase.Count;i++)
             {
-                Classes.ItemToPurchase item = new Classes.ItemToPurchase();
-                item = (Classes.ItemToPurchase)Classes.ShoppingCart.Instance.ItemsToPurchase[i];
+                ItemToPurchase item = new ItemToPurchase();
+                item = (ItemToPurchase)ShoppingCart.Instance.ItemsToPurchase[i];
                 total += (item.Quantity * item.Product.Price);
                 UC_ShoppingCartItem product = new UC_ShoppingCartItem(item);
                 product.Dock = DockStyle.Top;
@@ -54,7 +55,7 @@ namespace BookShopManagement.UserControls
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            Classes.ShoppingCart.Instance.RemoveProduct(true);
+            ShoppingCart.Instance.RemoveProduct(true);
             pnlCart.Controls.Clear();
             lblTotal.Text = "0 €";
             pnlHeaders.Dock = DockStyle.Top;
@@ -63,9 +64,16 @@ namespace BookShopManagement.UserControls
 
         private void btnAddNewBooks_Click(object sender, EventArgs e)
         {
-            using (Form_Checkout fch = new Form_Checkout())
+            if (ShoppingCart.Instance.ItemsToPurchase.Count > 0)
             {
-                fch.ShowDialog();
+                using (Form_Checkout fch = new Form_Checkout())
+                {
+                    fch.ShowDialog();
+                }
+            }
+            else
+            {
+                Alert.Create("Your Cart Is Empty!", Alert.Type.Error);
             }
         }
     }

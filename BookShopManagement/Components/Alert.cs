@@ -121,7 +121,7 @@ namespace BookShopManagement.Components
                 case Type.Added:
                     this.pbxIcon.Image = Resources.success;
                     this.BackColor = Color.FromArgb(39, 174, 96);
-                    this.Location = new Point(this.x, this.y - 590);
+                    this.Location = new Point(this.x, 50);
                     break;
 
             }

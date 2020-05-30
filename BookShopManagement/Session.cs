@@ -20,12 +20,15 @@ namespace BookShopManagement
         public static Session Instance { get; private set; } = new Session();
 
         public Customer Customer = null;
+        public string OrderNo;
 
         IDictionary<int, int> itemslist = new Dictionary<int, int>();
 
         public void SetCustomer(Customer customer)
         {
             this.Customer = customer;
+            OrderNo = Customer.CustomerID.ToString()+DateTime.Now.ToString(@"MMddyyyyHHmmss");
+            Console.WriteLine(OrderNo);
         }
 
         public void add_item(int id, int qty)
