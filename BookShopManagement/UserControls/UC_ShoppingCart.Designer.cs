@@ -195,7 +195,7 @@ namespace BookShopManagement.UserControls
             this.lblProductName.AutoSize = true;
             this.lblProductName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductName.ForeColor = System.Drawing.Color.White;
-            this.lblProductName.Location = new System.Drawing.Point(496, 3);
+            this.lblProductName.Location = new System.Drawing.Point(400, 3);
             this.lblProductName.Name = "lblProductName";
             this.lblProductName.Size = new System.Drawing.Size(58, 19);
             this.lblProductName.TabIndex = 3;

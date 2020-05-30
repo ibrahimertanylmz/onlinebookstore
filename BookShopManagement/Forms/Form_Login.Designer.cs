@@ -56,7 +56,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1200, 57);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 11;
             // 
             // btnExit
             // 
@@ -71,7 +71,7 @@
             this.btnExit.Location = new System.Drawing.Point(1139, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(61, 57);
-            this.btnExit.TabIndex = 4;
+            this.btnExit.TabIndex = 10;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -82,7 +82,7 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
             // label2
@@ -93,7 +93,7 @@
             this.label2.Location = new System.Drawing.Point(60, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(184, 25);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 8;
             this.label2.Text = "Esogu Book Store";
             // 
             // label1
@@ -104,7 +104,7 @@
             this.label1.Location = new System.Drawing.Point(336, 342);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 21);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 7;
             this.label1.Text = "User Name:";
             // 
             // pictureBox2
@@ -115,7 +115,7 @@
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(80, 87);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
             // label3
@@ -127,7 +127,7 @@
             this.label3.Location = new System.Drawing.Point(513, 297);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(181, 25);
-            this.label3.TabIndex = 1;
+            this.label3.TabIndex = 5;
             this.label3.Text = "Please Login First";
             // 
             // txtUserName
@@ -137,7 +137,7 @@
             this.txtUserName.Location = new System.Drawing.Point(340, 369);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(547, 31);
-            this.txtUserName.TabIndex = 1;
+            this.txtUserName.TabIndex = 0;
             // 
             // label4
             // 
@@ -147,7 +147,7 @@
             this.label4.Location = new System.Drawing.Point(336, 415);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 21);
-            this.label4.TabIndex = 1;
+            this.label4.TabIndex = 4;
             this.label4.Text = "Password:";
             // 
             // txtPassword
@@ -157,7 +157,7 @@
             this.txtPassword.Location = new System.Drawing.Point(340, 442);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(547, 31);
-            this.txtPassword.TabIndex = 2;
+            this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
