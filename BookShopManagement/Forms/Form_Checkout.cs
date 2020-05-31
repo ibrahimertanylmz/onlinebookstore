@@ -17,6 +17,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BookShopManagement.UserControls;
 using BookShopManagement.Classes;
+using System.Data.SqlClient;
 
 namespace BookShopManagement.Forms
 {
@@ -29,9 +30,21 @@ namespace BookShopManagement.Forms
             Console.WriteLine("Button Pressed");
         }
 
+        private void Form_Checkout_Load(object sender, EventArgs e)
+        {
+            PersonalInformation();
+        }
+
+        void PersonalInformation()
+        {
+            txtName.Text = Session.Instance.Customer.FirstName.ToString() + " " + Session.Instance.Customer.LastName.ToString();
+            txtAdress.Text = Session.Instance.Customer.Adress.ToString();
+            mskPhone.Text = Session.Instance.Customer.Phone.ToString();
+        }
+
         private void btnpayment_Click(object sender, EventArgs e)
         {
-            if (txtName.Text != "" && txtAdress.Text != "" && txtHouseNo.Text != "" && txtCity.Text != "" && mskPhone.MaskCompleted)
+            if (txtName.Text != "" && txtAdress.Text != "" && mskPhone.MaskCompleted)
             {
                 if (rbCard.Checked)
                 {
@@ -61,23 +74,7 @@ namespace BookShopManagement.Forms
                 else
                 {
                     lblAddressText.ForeColor = Color.FromArgb(0, 71, 160);
-                }
-                if (txtHouseNo.Text == "")
-                {
-                    lblHouseText.ForeColor = Color.FromArgb(255, 0, 0);
-                }
-                else
-                {
-                    lblHouseText.ForeColor = Color.FromArgb(0, 71, 160);
-                }
-                if (txtCity.Text == "")
-                {
-                    lblCityText.ForeColor = Color.FromArgb(255, 0, 0);
-                }
-                else
-                {
-                    lblCityText.ForeColor = Color.FromArgb(0, 71, 160);
-                }
+                }    
                 if (!mskPhone.MaskCompleted)
                 {
                     lblPhoneText.ForeColor = Color.FromArgb(255, 0, 0);
@@ -115,6 +112,18 @@ namespace BookShopManagement.Forms
         private void btnCancel_Click(object sender, EventArgs e)
         {
             ShoppingCart.Instance.CancelOrder();
+        }
+
+        private void btngift_Click(object sender, EventArgs e)
+        {
+            txtName.Text = "";
+            txtAdress.Text = "";
+            mskPhone.Text = "";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PersonalInformation();
         }
     }
 }

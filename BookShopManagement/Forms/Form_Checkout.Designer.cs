@@ -34,8 +34,6 @@
             this.panelPayment = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblHouseText = new System.Windows.Forms.Label();
-            this.txtHouseNo = new System.Windows.Forms.TextBox();
             this.btnpayment = new System.Windows.Forms.Button();
             this.lblNameText = new System.Windows.Forms.Label();
             this.lblAddressText = new System.Windows.Forms.Label();
@@ -43,14 +41,14 @@
             this.txtAdress = new System.Windows.Forms.TextBox();
             this.lblPhoneText = new System.Windows.Forms.Label();
             this.mskPhone = new System.Windows.Forms.MaskedTextBox();
-            this.lblCityText = new System.Windows.Forms.Label();
-            this.txtCity = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbCard = new System.Windows.Forms.RadioButton();
             this.rbCash = new System.Windows.Forms.RadioButton();
             this.panelCheckout = new System.Windows.Forms.Panel();
+            this.btngift = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -115,27 +113,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // lblHouseText
-            // 
-            this.lblHouseText.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblHouseText.AutoSize = true;
-            this.lblHouseText.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblHouseText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.lblHouseText.Location = new System.Drawing.Point(180, 333);
-            this.lblHouseText.Name = "lblHouseText";
-            this.lblHouseText.Size = new System.Drawing.Size(158, 21);
-            this.lblHouseText.TabIndex = 49;
-            this.lblHouseText.Text = "Building/House NO:";
-            // 
-            // txtHouseNo
-            // 
-            this.txtHouseNo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtHouseNo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHouseNo.Location = new System.Drawing.Point(184, 360);
-            this.txtHouseNo.Name = "txtHouseNo";
-            this.txtHouseNo.Size = new System.Drawing.Size(354, 31);
-            this.txtHouseNo.TabIndex = 47;
-            // 
             // btnpayment
             // 
             this.btnpayment.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -170,7 +147,7 @@
             this.lblAddressText.AutoSize = true;
             this.lblAddressText.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblAddressText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.lblAddressText.Location = new System.Drawing.Point(180, 257);
+            this.lblAddressText.Location = new System.Drawing.Point(180, 191);
             this.lblAddressText.Name = "lblAddressText";
             this.lblAddressText.Size = new System.Drawing.Size(65, 21);
             this.lblAddressText.TabIndex = 50;
@@ -189,7 +166,7 @@
             // 
             this.txtAdress.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtAdress.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAdress.Location = new System.Drawing.Point(184, 284);
+            this.txtAdress.Location = new System.Drawing.Point(184, 218);
             this.txtAdress.Name = "txtAdress";
             this.txtAdress.Size = new System.Drawing.Size(354, 31);
             this.txtAdress.TabIndex = 46;
@@ -215,27 +192,6 @@
             this.mskPhone.Name = "mskPhone";
             this.mskPhone.Size = new System.Drawing.Size(354, 31);
             this.mskPhone.TabIndex = 44;
-            // 
-            // lblCityText
-            // 
-            this.lblCityText.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCityText.AutoSize = true;
-            this.lblCityText.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCityText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.lblCityText.Location = new System.Drawing.Point(180, 188);
-            this.lblCityText.Name = "lblCityText";
-            this.lblCityText.Size = new System.Drawing.Size(45, 21);
-            this.lblCityText.TabIndex = 53;
-            this.lblCityText.Text = "City:";
-            // 
-            // txtCity
-            // 
-            this.txtCity.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCity.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCity.Location = new System.Drawing.Point(184, 215);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(354, 31);
-            this.txtCity.TabIndex = 45;
             // 
             // label1
             // 
@@ -288,11 +244,11 @@
             // panelCheckout
             // 
             this.panelCheckout.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelCheckout.Controls.Add(this.button1);
+            this.panelCheckout.Controls.Add(this.btngift);
             this.panelCheckout.Controls.Add(this.btnCancel);
             this.panelCheckout.Controls.Add(this.groupBox1);
             this.panelCheckout.Controls.Add(this.label1);
-            this.panelCheckout.Controls.Add(this.txtCity);
-            this.panelCheckout.Controls.Add(this.lblCityText);
             this.panelCheckout.Controls.Add(this.mskPhone);
             this.panelCheckout.Controls.Add(this.lblPhoneText);
             this.panelCheckout.Controls.Add(this.txtAdress);
@@ -300,12 +256,22 @@
             this.panelCheckout.Controls.Add(this.lblAddressText);
             this.panelCheckout.Controls.Add(this.lblNameText);
             this.panelCheckout.Controls.Add(this.btnpayment);
-            this.panelCheckout.Controls.Add(this.txtHouseNo);
-            this.panelCheckout.Controls.Add(this.lblHouseText);
             this.panelCheckout.Location = new System.Drawing.Point(0, 108);
             this.panelCheckout.Name = "panelCheckout";
             this.panelCheckout.Size = new System.Drawing.Size(719, 557);
             this.panelCheckout.TabIndex = 25;
+            // 
+            // btngift
+            // 
+            this.btngift.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btngift.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.btngift.Location = new System.Drawing.Point(449, 29);
+            this.btngift.Name = "btngift";
+            this.btngift.Size = new System.Drawing.Size(89, 33);
+            this.btngift.TabIndex = 57;
+            this.btngift.Text = "Gift";
+            this.btngift.UseVisualStyleBackColor = true;
+            this.btngift.Click += new System.EventHandler(this.btngift_Click);
             // 
             // btnCancel
             // 
@@ -323,6 +289,18 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.button1.Location = new System.Drawing.Point(340, 29);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 33);
+            this.button1.TabIndex = 58;
+            this.button1.Text = "Personal";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form_Checkout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -334,6 +312,7 @@
             this.Name = "Form_Checkout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form_Checkout";
+            this.Load += new System.EventHandler(this.Form_Checkout_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -351,8 +330,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelPayment;
-        private System.Windows.Forms.Label lblHouseText;
-        private System.Windows.Forms.TextBox txtHouseNo;
         private System.Windows.Forms.Button btnpayment;
         private System.Windows.Forms.Label lblNameText;
         private System.Windows.Forms.Label lblAddressText;
@@ -360,13 +337,13 @@
         private System.Windows.Forms.TextBox txtAdress;
         private System.Windows.Forms.Label lblPhoneText;
         private System.Windows.Forms.MaskedTextBox mskPhone;
-        private System.Windows.Forms.Label lblCityText;
-        private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbCard;
         private System.Windows.Forms.RadioButton rbCash;
         private System.Windows.Forms.Panel panelCheckout;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btngift;
+        private System.Windows.Forms.Button button1;
     }
 }

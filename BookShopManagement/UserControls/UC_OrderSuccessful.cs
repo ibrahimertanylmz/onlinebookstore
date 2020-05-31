@@ -46,6 +46,11 @@ namespace BookShopManagement.UserControls
                 add.Parameters.AddWithValue("@P4", item.Product.Name);
                 add.Parameters.AddWithValue("@P5", item.Product.Picture);
                 add.ExecuteNonQuery();
+
+                
+                SqlCommand decrease = new SqlCommand("update TBLPRODUCT SET QUANTITY=QUANTITY-@P1 where ID="+item.Product.Id, Connection.connect);
+                decrease.Parameters.AddWithValue("@P1", item.Quantity);
+                decrease.ExecuteNonQuery();
             }
         }
     }
