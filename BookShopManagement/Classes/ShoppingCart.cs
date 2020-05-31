@@ -14,6 +14,7 @@ using System.Linq;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using BookShopManagement.Components;
 using BookShopManagement.Forms;
 
@@ -88,20 +89,24 @@ namespace BookShopManagement.Classes
         {
             try
             {
+                PDF pdf = new PDF(Session.Instance.OrderNo);
                 MailMessage mail = new MailMessage();
                 SmtpClient smtpServer = new SmtpClient("ams1.sunucum.cloud");
-                string message = "Hello " + Session.Instance.Customer.FirstName + ",\n" + "Your order no: "
+                string message = "Hello " + Session.Instance.Customer.FirstName + ",\n\n" + "Your order no: "
                     + Session.Instance.OrderNo + "was successfully processed." +
                     "\nThank you for shopping with us!" +
-                    "\n\nYours,\nThe OnlineBookStore Team";
+                    "\n\nYours,\nThe Esogu BookStore";
                 mail.From = new MailAddress("bookstore@enessolak.com.tr");
+                mail.Subject = "Succesful Order Processed!";
                 mail.To.Add(Session.Instance.Customer.Email.ToString());
                 mail.Body = message;
-                mail.Subject = "Your Invoice";
+                mail.Attachments.Add(new Attachment(Session.Instance.OrderNo.ToString()+".pdf"));
                 smtpServer.Port = 587;
                 smtpServer.Credentials = new System.Net.NetworkCredential("bookstore@enessolak.com.tr", "BookStore!!!");
                 smtpServer.EnableSsl = true;
                 smtpServer.Send(mail);
+
+                ShoppingCart.Instance.RemoveProduct(true);
             }
             catch
             {

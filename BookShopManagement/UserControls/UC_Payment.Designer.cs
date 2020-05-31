@@ -120,6 +120,7 @@
             this.mskCVV.Location = new System.Drawing.Point(445, 325);
             this.mskCVV.Mask = "000";
             this.mskCVV.Name = "mskCVV";
+            this.mskCVV.PasswordChar = '•';
             this.mskCVV.Size = new System.Drawing.Size(93, 31);
             this.mskCVV.TabIndex = 4;
             // 
