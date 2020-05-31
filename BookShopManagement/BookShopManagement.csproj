@@ -149,12 +149,6 @@
     <Compile Include="UserControls\UC_Music.Designer.cs">
       <DependentUpon>UC_Music.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_ShoppingCartItem.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UC_ShoppingCartItem.Designer.cs">
-      <DependentUpon>UC_ShoppingCartItem.cs</DependentUpon>
-    </Compile>
     <Compile Include="Utils.cs" />
     <EmbeddedResource Include="Components\Alert.resx">
       <DependentUpon>Alert.cs</DependentUpon>
@@ -205,9 +199,6 @@
     <EmbeddedResource Include="UserControls\UC_Music.resx">
       <DependentUpon>UC_Music.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_ShoppingCartItem.resx">
-      <DependentUpon>UC_ShoppingCartItem.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -238,9 +229,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\qcBBexbc5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\trash.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

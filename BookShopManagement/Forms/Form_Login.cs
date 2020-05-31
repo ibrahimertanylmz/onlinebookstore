@@ -58,7 +58,7 @@ namespace BookShopManagement
             }
             catch (Exception)
             {
-                Alert.Create("Didnt connect to database.", Alert.Type.Error);
+                Alert.Create("Couldn't connect to database.", Alert.Type.Error);
             }
         }
 
