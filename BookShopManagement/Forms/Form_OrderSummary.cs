@@ -38,7 +38,7 @@ namespace BookShopManagement.Forms
                 {
                     BackColor = Color.RoyalBlue,
                     Location = new Point(50, 50 + i * 120),
-                    Name = "product-" + reader["PRODUCTID"],
+                    Name = "product-" + reader["PRODUCTID"].ToString(),
                     Size = new Size(400, 70),
                     Dock = DockStyle.Top
                 };
@@ -48,7 +48,7 @@ namespace BookShopManagement.Forms
                     Anchor = AnchorStyles.None,
                     Dock = DockStyle.Left,
                     Location = new Point(0, 0),
-                    Name = "productPicture-" + reader["PRODUCTID"],
+                    Name = "productPicture-" + reader["PRODUCTID"].ToString(),
                     Image = Utils.Base64StringToBitmap(reader["PICTURE"].ToString()),
                     SizeMode = PictureBoxSizeMode.StretchImage,
                     Size = new Size(55, 60),
@@ -63,7 +63,7 @@ namespace BookShopManagement.Forms
                     Font = new Font("Calibri", 15F, FontStyle.Italic, GraphicsUnit.Point, ((byte)(0))),
                     Location = new Point(120, 24),
                     MaximumSize = new Size(140, 24),
-                    Name = "productName-" + reader["PRODUCTID"],
+                    Name = "productName-" + reader["PRODUCTID"].ToString(),
                     Size = new Size(140, 24),
                     TabIndex = 2,
                     Text = reader["NAME"].ToString(),
@@ -76,7 +76,7 @@ namespace BookShopManagement.Forms
                     AutoSize = true,
                     Font = new Font("Calibri", 15F, FontStyle.Italic, GraphicsUnit.Point, ((byte)(0))),
                     Location = new Point(345, 24),
-                    Name = "productQuantity-" + reader["PRODUCTID"],
+                    Name = "productQuantity-" + reader["PRODUCTID"].ToString(),
                     Size = new Size(22, 24),
                     TabIndex = 5,
                     Text = reader["QTY"].ToString(),
