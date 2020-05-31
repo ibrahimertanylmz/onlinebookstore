@@ -48,7 +48,7 @@ namespace BookShopManagement.UserControls
             {
                 Panel panel = new Panel
                 {
-                    BackColor = Color.FromArgb(16, 52, 166),
+                    BackColor = Color.FromArgb(15, 82, 186),
                     Location = new Point(50 + count % 3 * 300, 50 + (int)(Math.Floor((decimal)count / 3) * 250)),
                     Name = "product-" + reader["ID"].ToString(),
                     Size = new Size(250, 200),
@@ -87,7 +87,7 @@ namespace BookShopManagement.UserControls
 
                 Button button = new Button
                 {
-                    BackColor = Color.FromArgb(15, 82, 186),
+                    BackColor = Color.FromArgb(65, 105, 225),
                     FlatStyle = FlatStyle.Flat,
                     Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0))),
                     ForeColor = Color.White,

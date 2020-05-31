@@ -46,5 +46,17 @@ namespace BookShopManagement.UserControls
             mskPhone.Text = Session.Instance.Customer.Phone;
             txtUserName.Text = Session.Instance.Customer.Username;
         }
+
+        private void txtCurrentPassword_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCurrentPassword.Text == Session.Instance.Customer.Password)
+            {
+                txtPassword.ReadOnly = false;
+            }
+            else
+            {
+                txtPassword.ReadOnly = true;
+            }
+        }
     }
 }

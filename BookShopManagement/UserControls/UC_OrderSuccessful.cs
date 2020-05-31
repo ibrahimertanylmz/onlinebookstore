@@ -37,12 +37,14 @@ namespace BookShopManagement.UserControls
             {
                 ItemToPurchase item = new ItemToPurchase();
                 item = (ItemToPurchase)ShoppingCart.Instance.ItemsToPurchase[i];
-                SqlCommand add = new SqlCommand("insert into TBLPURCHASES (ORDERNO,PRODUCTID,QTY) VALUES (@P1,@P2,@P3)", Connection.connect);
+                SqlCommand add = new SqlCommand("insert into TBLPURCHASES (ORDERNO,PRODUCTID,QTY,NAME,PICTURE) VALUES (@P1,@P2,@P3,@P4,@P5)", Connection.connect);
                 if (add.Connection.State != ConnectionState.Open)
                     add.Connection.Open();
                 add.Parameters.AddWithValue("@P1", Session.Instance.OrderNo);
                 add.Parameters.AddWithValue("@P2", item.Product.Id);
                 add.Parameters.AddWithValue("@P3", item.Quantity);
+                add.Parameters.AddWithValue("@P4", item.Product.Name);
+                add.Parameters.AddWithValue("@P5", item.Product.Picture);
                 add.ExecuteNonQuery();
             }
         }
