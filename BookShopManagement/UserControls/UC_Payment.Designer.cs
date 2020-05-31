@@ -121,7 +121,7 @@
             this.mskCVV.Mask = "000";
             this.mskCVV.Name = "mskCVV";
             this.mskCVV.Size = new System.Drawing.Size(93, 31);
-            this.mskCVV.TabIndex = 50;
+            this.mskCVV.TabIndex = 4;
             // 
             // mskDate
             // 
@@ -131,7 +131,7 @@
             this.mskDate.Mask = "00/00";
             this.mskDate.Name = "mskDate";
             this.mskDate.Size = new System.Drawing.Size(93, 31);
-            this.mskDate.TabIndex = 49;
+            this.mskDate.TabIndex = 3;
             // 
             // lblCardNoText
             // 
@@ -165,7 +165,7 @@
             this.mskCardNo.Mask = "0000-0000-0000-0000";
             this.mskCardNo.Name = "mskCardNo";
             this.mskCardNo.Size = new System.Drawing.Size(354, 31);
-            this.mskCardNo.TabIndex = 45;
+            this.mskCardNo.TabIndex = 2;
             // 
             // txtName
             // 
@@ -174,7 +174,7 @@
             this.txtName.Location = new System.Drawing.Point(184, 164);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(354, 31);
-            this.txtName.TabIndex = 44;
+            this.txtName.TabIndex = 1;
             // 
             // btnpayment
             // 
@@ -187,7 +187,7 @@
             this.btnpayment.Location = new System.Drawing.Point(184, 427);
             this.btnpayment.Name = "btnpayment";
             this.btnpayment.Size = new System.Drawing.Size(354, 39);
-            this.btnpayment.TabIndex = 46;
+            this.btnpayment.TabIndex = 5;
             this.btnpayment.Text = "Pay";
             this.btnpayment.UseVisualStyleBackColor = false;
             this.btnpayment.Click += new System.EventHandler(this.btnpayment_Click);

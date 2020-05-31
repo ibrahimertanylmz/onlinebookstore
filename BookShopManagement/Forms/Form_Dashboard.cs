@@ -119,9 +119,11 @@ namespace BookShopManagement.Forms
             AddControlsToPanel(sc);
 
         }
-        private void btnSettings_Click(object sender, EventArgs e)
+        private void btnHistory_Click(object sender, EventArgs e)
         {
-            moveSidePanel(btnSettings);
+            moveSidePanel(btnHistory);
+            UC_History oh = new UC_History();
+            AddControlsToPanel(oh);
         }
 
         private void timerTime_Tick(object sender, EventArgs e)

@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.leftPanel = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -54,45 +51,15 @@
             this.btnDecrease = new System.Windows.Forms.Button();
             this.btnIncrease = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.leftPanel.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.leftPanel = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelRight.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.leftPanel.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // leftPanel
-            // 
-            this.leftPanel.AutoScroll = true;
-            this.leftPanel.Controls.Add(this.groupBox1);
-            this.leftPanel.Location = new System.Drawing.Point(0, 86);
-            this.leftPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(726, 494);
-            this.leftPanel.TabIndex = 13;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(205)))));
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 192);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(720, 71);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label1.Location = new System.Drawing.Point(100, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(517, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "There are no products in this category!";
             // 
             // label4
             // 
@@ -353,6 +320,39 @@
             this.panel6.Size = new System.Drawing.Size(239, 7);
             this.panel6.TabIndex = 4;
             // 
+            // leftPanel
+            // 
+            this.leftPanel.AutoScroll = true;
+            this.leftPanel.Controls.Add(this.groupBox1);
+            this.leftPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.leftPanel.Location = new System.Drawing.Point(0, 73);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.leftPanel.Name = "leftPanel";
+            this.leftPanel.Size = new System.Drawing.Size(726, 507);
+            this.leftPanel.TabIndex = 13;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(205)))));
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(3, 174);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(720, 71);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(101, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(517, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "There are no products in this category!";
+            // 
             // UC_Music
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -364,21 +364,20 @@
             this.Name = "UC_Music";
             this.Size = new System.Drawing.Size(985, 580);
             this.Load += new System.EventHandler(this.UC_Music_Load);
-            this.leftPanel.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.panelRight.ResumeLayout(false);
             this.panelRight.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
+            this.leftPanel.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
@@ -402,6 +401,7 @@
         private System.Windows.Forms.Button btnDecrease;
         private System.Windows.Forms.Button btnIncrease;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
     }

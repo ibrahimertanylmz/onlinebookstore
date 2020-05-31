@@ -118,25 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnSettings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAyVJREFUSEul
-        ljloVFEUhrMQUbtoEzWJaNQkndgIGrfCpRBcKgsbwSgoihZ2RrQUwaVQwYhgFMGIFiKIUawUxCAiQkDc
-        4q7Bwi2IC47ff9+5M3fevDfzhnzwMe/dc849M2+5d2pyuVwr3sWtWF8zBqifggfwDv7Cfzho4WIIPEDP
-        Y1xhocxQMwGP4E+Ms8/SiiGwI4oXcc7CFSG3GR+6qlJ6LK0UgvX4yKUVGLBwWchrwEFXUYwu8W5LS4ek
-        VS69wEtssXAq5Cx32aVcsJREiDfYoTs5j7fwNYpnWLY58R6XWcoH7LC0PIzV4km8b0MFGNQ9e4pCX6LN
-        QiUQ2+WyknmP7ZYaNhWjNlwMgUzNGZ/vMtJ5h3NQTU9owPhoU5RCMGvzpIcrRL/8RnSY54qVJ0OCmute
-        CzWfZSEH58twVMEq2WZTpENSC/rmb9A153M1anWqFl3+8W7ySpBY0hzX41HcgAcx65eo/H6HUJDUXOv8
-        HvvcjJW4iXU2ZXYoakM1FffwVXSYG0I9uW/xG95GrV4h13CyTZUdipbgOtSv0+6jJp4Ry+nFxXbcjroN
-        W3CexqpGk+EPPIxq7Fe3kGNYayVjh8m68LtmhrW4NzpMRHnXsdnKs0PROOzEubgSdc88h1C/WNvgZw2k
-        8BxbbcrykDgVT2PYKM5f3IR6kKQ2f89l7IsOHZWbk9CB4cNSCS0CvVb71Y3kcmdR+3O25gQmWkI16Kos
-        sPoBNxKR1PwFTnfNQhiMb20XsRtn4xkNxNAD1GXlqtfCosk92ZozoHfSM2zDDs7r8JSLFFhj4TyMNaEW
-        Ec8lVPPj7iwiv847ONG/BY+7byGMaYcKWWqhIhgPt1GR1Fy9On2BX/bEdjcYwNjGKJQnf5njEJuBwy4r
-        IumyK96k5KvuNEJP6EKbx8G5ij2/sdFCiRBX8/DHqF6vavia9ilR62+IHp6dqHsbTiD6bf6ykDcTw2XV
-        v3KeT0rSQhD/a5LEF0z94xdHuZi0poshn9SI2srSGMFFLrkKqNGrlrRGdFuKS9Kro21MX0D/o/7gE9yP
-        kyytaqidhv2oW6grwLqRq/0Pu0XlWLVU4FkAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="btnCart.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO

@@ -44,6 +44,8 @@
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.mskPhone = new System.Windows.Forms.MaskedTextBox();
+            this.txtCurrentPassword = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -141,6 +143,7 @@
             this.txtUserName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUserName.Location = new System.Drawing.Point(556, 145);
             this.txtUserName.Name = "txtUserName";
+            this.txtUserName.ReadOnly = true;
             this.txtUserName.Size = new System.Drawing.Size(199, 27);
             this.txtUserName.TabIndex = 1;
             // 
@@ -149,17 +152,18 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(466, 203);
+            this.label8.Location = new System.Drawing.Point(427, 245);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 19);
+            this.label8.Size = new System.Drawing.Size(123, 19);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Password:";
+            this.label8.Text = "New Password:";
             // 
             // txtPassword
             // 
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPassword.Location = new System.Drawing.Point(556, 199);
+            this.txtPassword.Location = new System.Drawing.Point(556, 237);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.ReadOnly = true;
             this.txtPassword.Size = new System.Drawing.Size(199, 27);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
@@ -208,10 +212,33 @@
             this.mskPhone.Size = new System.Drawing.Size(199, 27);
             this.mskPhone.TabIndex = 25;
             // 
+            // txtCurrentPassword
+            // 
+            this.txtCurrentPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCurrentPassword.Location = new System.Drawing.Point(556, 191);
+            this.txtCurrentPassword.Name = "txtCurrentPassword";
+            this.txtCurrentPassword.Size = new System.Drawing.Size(199, 27);
+            this.txtCurrentPassword.TabIndex = 27;
+            this.txtCurrentPassword.UseSystemPasswordChar = true;
+            this.txtCurrentPassword.TextChanged += new System.EventHandler(this.txtCurrentPassword_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(460, 199);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 19);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "Password:";
+            // 
             // UC_ManageUser
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.txtCurrentPassword);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.mskPhone);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.label5);
@@ -256,5 +283,7 @@
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MaskedTextBox mskPhone;
+        private System.Windows.Forms.TextBox txtCurrentPassword;
+        private System.Windows.Forms.Label label9;
     }
 }
