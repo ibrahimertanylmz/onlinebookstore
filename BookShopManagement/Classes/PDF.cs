@@ -78,7 +78,7 @@ namespace BookShopManagement.Classes
                 for (var i = 0; i < purchaseItems.Count; i++)
                 {
                     Cell cell1 = new Cell(1, 1).SetTextAlignment(TextAlignment.CENTER).Add(new Paragraph(purchaseItems[i].Quantity.ToString()));
-                    Cell cell2 = new Cell(1, 1).SetTextAlignment(TextAlignment.CENTER).Add(new Paragraph(purchaseItems[i].Product.Name.ToString()));
+                    Cell cell2 = new Cell(1, 1).SetTextAlignment(TextAlignment.LEFT).Add(new Paragraph(purchaseItems[i].Product.Name.ToString()));
                     Cell cell3 = new Cell(1, 1).SetTextAlignment(TextAlignment.RIGHT).Add(new Paragraph("€" + purchaseItems[i].Product.Price.ToString("0.00")));
                     
                     table.AddCell(cell1);
