@@ -18,6 +18,11 @@ namespace BookShopManagement.Classes
         public Product Product { get; set; }
         public int Quantity { get; set; }
         public ItemToPurchase() { }
+        /**
+         * @brief : Constructor function for ItemToPurchase.
+         * @param Product: Product object for ItemToPurchase.
+         * @param Quantity: Count of product ItemToPurchase.
+         */
         public ItemToPurchase(Product Product,int Quantity)
         {
             this.Product = Product;

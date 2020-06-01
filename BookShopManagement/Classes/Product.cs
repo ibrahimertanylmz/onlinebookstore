@@ -20,7 +20,14 @@ namespace BookShopManagement.Classes
         public string Picture { get; protected set; }
 
         protected Product() { }
-
+        /**
+          * @brief : Constructor function for Product Class.
+          * @param Name: Name of Product.
+          * @param Id: Id of product.
+          * @param Price: Price of Product.
+          * @param Quantity: Count of Product.
+          * @param Picture: Picture of Product.
+          */
         protected Product(string Name, int Id, double Price, int Quantity, string Picture)
         {
             this.Name = Name;
