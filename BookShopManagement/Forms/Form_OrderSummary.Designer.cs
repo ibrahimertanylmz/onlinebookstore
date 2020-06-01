@@ -1,4 +1,6 @@
-﻿namespace BookShopManagement.Forms
+﻿using BookShopManagement.Classes;
+
+namespace BookShopManagement.Forms
 {
     partial class Form_OrderSummary
     {
@@ -91,6 +93,7 @@
             this.btnExit.TabIndex = 4;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.Click += Logger.LogButtonClick;
             // 
             // pictureBox1
             // 

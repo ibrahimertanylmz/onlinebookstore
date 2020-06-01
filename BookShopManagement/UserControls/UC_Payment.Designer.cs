@@ -1,4 +1,6 @@
-﻿namespace BookShopManagement.UserControls
+﻿using BookShopManagement.Classes;
+
+namespace BookShopManagement.UserControls
 {
     partial class UC_Payment
     {
@@ -191,6 +193,7 @@
             this.btnpayment.Text = "Pay";
             this.btnpayment.UseVisualStyleBackColor = false;
             this.btnpayment.Click += new System.EventHandler(this.btnpayment_Click);
+            this.btnpayment.Click += Logger.LogButtonClick;
             // 
             // pBPayment
             // 

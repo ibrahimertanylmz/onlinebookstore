@@ -1,4 +1,6 @@
-﻿namespace BookShopManagement
+﻿using BookShopManagement.Classes;
+
+namespace BookShopManagement
 {
     partial class Form_Login
     {
@@ -74,6 +76,7 @@
             this.btnExit.TabIndex = 10;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.Click += Logger.LogButtonClick;
             // 
             // pictureBox1
             // 
@@ -175,6 +178,7 @@
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.Click += Logger.LogButtonClick;
             // 
             // linkLabelRegister
             // 
