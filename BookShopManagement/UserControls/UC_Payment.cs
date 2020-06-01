@@ -17,7 +17,7 @@ namespace BookShopManagement.UserControls
         public UC_Payment()
         {
             InitializeComponent();
-            lblPrice.Text = ShoppingCart.Instance.PaymentAmount.ToString() + " €";
+            lblPrice.Text = " €" + ShoppingCart.Instance.PaymentAmount.ToString();
         }
 
         private void btnpayment_Click(object sender, EventArgs e)
@@ -26,7 +26,7 @@ namespace BookShopManagement.UserControls
             {
                 UC_OrderSuccessful uco = new UC_OrderSuccessful();
                 AddControlsToPanel(uco);
-                ShoppingCart.Instance.SendInvoicebyEmail();
+                ShoppingCart.Instance.SendInvoicebyEmail();                
             }
             else
             {

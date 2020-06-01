@@ -34,14 +34,14 @@ namespace BookShopManagement.UserControls
             {
                 lastbookname.Text= reader["NAME"].ToString();
                 lastbookpicture.Image = Utils.Base64StringToBitmap(reader["PICTURE"].ToString());
-                lastbookprice.Text = reader["PRICE"].ToString() + " €";   
+                lastbookprice.Text = "€" + reader["PRICE"].ToString();   
             }
 
             if (reader.Read())
             {
                 previouslastbookname.Text = reader["NAME"].ToString();
                 previouslastbookpicture.Image = Utils.Base64StringToBitmap(reader["PICTURE"].ToString());
-                previouslastbookprice.Text = reader["PRICE"].ToString() + " €";
+                previouslastbookprice.Text = "€" + reader["PRICE"].ToString();
             }
 
             reader.Close();       
@@ -56,14 +56,14 @@ namespace BookShopManagement.UserControls
             {
                 lastmagazinename.Text = reader2["NAME"].ToString();
                 lastmagazinepicture.Image = Utils.Base64StringToBitmap(reader2["PICTURE"].ToString());
-                lastmagazineprice.Text = reader2["PRICE"].ToString() + " €";
+                lastmagazineprice.Text = "€" + reader2["PRICE"].ToString();
             }
 
             if (reader2.Read())
             {
                 previouslastmagazinename.Text = reader2["NAME"].ToString();
                 previouslastmagazinepicture.Image = Utils.Base64StringToBitmap(reader2["PICTURE"].ToString());
-                previouslastmagazineprice.Text = reader2["PRICE"].ToString() + " €";
+                previouslastmagazineprice.Text = "€" + reader2["PRICE"].ToString();
             }
 
             reader2.Close();
@@ -78,14 +78,14 @@ namespace BookShopManagement.UserControls
             {
                 lastmusicCDname.Text = reader3["NAME"].ToString();
                 lastmusicCDpicture.Image = Utils.Base64StringToBitmap(reader3["PICTURE"].ToString());
-                lastmusicCDprice.Text = reader3["PRICE"].ToString() + " €";
+                lastmusicCDprice.Text = "€" + reader3["PRICE"].ToString();
             }
 
             if (reader3.Read())
             {
                 previouslastmusicCDname.Text = reader3["NAME"].ToString();
                 previouslastmusicCDpicture.Image = Utils.Base64StringToBitmap(reader3["PICTURE"].ToString());
-                previouslastmusicCDprice.Text = reader3["PRICE"].ToString() + " €";
+                previouslastmusicCDprice.Text = "€" + reader3["PRICE"].ToString();
             }
 
             reader3.Close();

@@ -2,7 +2,8 @@
  * @author Ahmad ZAIDAN
  * @date 25.05.2020
  * 
- * @edited_by Kumbukani Kamanga 26.05.2020 
+ * @edited_by Kumbukani KAMANGA 26.05.2020 
+ * @edited_by Onur GÜZEL 31.05.2020 
 */
 
 
@@ -29,7 +30,6 @@ namespace BookShopManagement.Forms
             rbCard.Checked = true;
             Console.WriteLine("Button Pressed");
         }
-
         private void Form_Checkout_Load(object sender, EventArgs e)
         {
             PersonalInformation();
@@ -55,6 +55,7 @@ namespace BookShopManagement.Forms
                 {
                     UC_OrderSuccessful uco = new UC_OrderSuccessful();
                     AddControlsToPanel(uco);
+                    ShoppingCart.Instance.SendInvoicebyEmail();
                 }
             }
             else
@@ -67,6 +68,7 @@ namespace BookShopManagement.Forms
                 {
                     lblNameText.ForeColor = Color.FromArgb(0, 71, 160);
                 }
+
                 if (txtAdress.Text == "")
                 {
                     lblAddressText.ForeColor = Color.FromArgb(255, 0, 0);
@@ -74,7 +76,9 @@ namespace BookShopManagement.Forms
                 else
                 {
                     lblAddressText.ForeColor = Color.FromArgb(0, 71, 160);
-                }    
+                }
+            
+                
                 if (!mskPhone.MaskCompleted)
                 {
                     lblPhoneText.ForeColor = Color.FromArgb(255, 0, 0);
@@ -105,7 +109,6 @@ namespace BookShopManagement.Forms
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-           // this.Dispose();
             ShoppingCart.Instance.CancelOrder();
         }
 
