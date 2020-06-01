@@ -14,6 +14,9 @@ using System.Threading.Tasks;
 
 namespace BookShopManagement
 {
+    /**
+    * \brief A class that saves this current session's information
+    */
     class Session
     {
         private Session() { }
@@ -21,30 +24,14 @@ namespace BookShopManagement
 
         public Customer Customer = null;
         public string OrderNo;
-
-        IDictionary<int, int> itemslist = new Dictionary<int, int>();
-
+        /**
+        * \brief SetCustomer. Saves the current customers object in the class
+        * \param Customer customer: Customer object
+        */
         public void SetCustomer(Customer customer)
         {
             this.Customer = customer;
             OrderNo = Customer.CustomerID.ToString()+DateTime.Now.ToString(@"MMddyyyyHHmmss");
-        }
-
-        public void add_item(int id, int qty)
-        {
-            if (itemslist.ContainsKey(id))
-            {
-                itemslist[id] += qty;
-            }
-            else
-            {
-                itemslist.Add(id, qty);
-            }
-        }
-
-        public void delete_item(int id)
-        {
-            itemslist.Remove(id);
         }
     }
 }

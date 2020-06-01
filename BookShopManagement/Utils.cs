@@ -13,8 +13,15 @@ using System.Threading.Tasks;
 
 namespace BookShopManagement
 {
+    /**
+    * \brief A class that handles the utilities
+    */
     class Utils
     {
+        /**
+        * \brief Base64StringToBitmap. Creates Bitmap object for a base64 String
+        * \param string base64String: Picture String
+        */
         public static Bitmap Base64StringToBitmap(string base64String)
         {
             Bitmap bmpReturn = null;
