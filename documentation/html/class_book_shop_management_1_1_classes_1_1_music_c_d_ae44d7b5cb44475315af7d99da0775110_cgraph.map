@@ -1,0 +1,4 @@
+<map id="BookShopManagement.Classes.MusicCD.CreateFromID" name="BookShopManagement.Classes.MusicCD.CreateFromID">
+<area shape="rect" id="node1" title="creates MusicCD using a product ID" alt="" coords="5,5,217,47"/>
+<area shape="rect" id="node2" href="$class_book_shop_management_1_1_classes_1_1_music_c_d.html#ae0328ce91610a55964cc10084719e581" title="MusicCD constructor. Sets MusicCD members." alt="" coords="265,5,477,47"/>
+</map>

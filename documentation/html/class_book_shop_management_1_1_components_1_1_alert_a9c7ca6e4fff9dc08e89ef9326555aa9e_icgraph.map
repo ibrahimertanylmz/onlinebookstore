@@ -1,0 +1,5 @@
+<map id="BookShopManagement.Components.Alert.Create" name="BookShopManagement.Components.Alert.Create">
+<area shape="rect" id="node1" title=" " alt="" coords="273,39,512,80"/>
+<area shape="rect" id="node2" href="$class_book_shop_management_1_1_classes_1_1_shopping_cart.html#adb6910d2e6a19e42bfc7092d13027576" title="Places the user&#39;s order." alt="" coords="9,5,221,47"/>
+<area shape="rect" id="node3" href="$class_book_shop_management_1_1_classes_1_1_shopping_cart.html#aa65d4be48e76bf2a1e6bacff2477ab33" title="Sends order invoice to user&#39;s email." alt="" coords="5,71,225,112"/>
+</map>
