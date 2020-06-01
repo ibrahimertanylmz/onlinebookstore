@@ -1,4 +1,5 @@
 ﻿using System;
+using BookShopManagement.Classes;
 
 namespace BookShopManagement.UserControls
 {
@@ -134,6 +135,7 @@ namespace BookShopManagement.UserControls
             this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.btnClear.Click += Logger.LogButtonClick;
             // 
             // label5
             // 
@@ -166,6 +168,7 @@ namespace BookShopManagement.UserControls
             this.btnCheckout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCheckout.UseVisualStyleBackColor = true;
             this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
+            this.btnCheckout.Click += Logger.LogButtonClick;
             // 
             // pnlCart
             // 

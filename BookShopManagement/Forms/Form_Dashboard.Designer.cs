@@ -1,4 +1,6 @@
-﻿namespace BookShopManagement.Forms
+﻿using BookShopManagement.Classes;
+
+namespace BookShopManagement.Forms
 {
     partial class Form_Dashboard
     {
@@ -104,6 +106,7 @@
             this.btnHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHistory.UseVisualStyleBackColor = true;
             this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
+            this.btnHistory.Click += Logger.LogButtonClick;
             // 
             // btnCart
             // 
@@ -121,6 +124,7 @@
             this.btnCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCart.UseVisualStyleBackColor = true;
             this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
+            this.btnCart.Click += Logger.LogButtonClick;
             // 
             // btnUser
             // 
@@ -138,6 +142,7 @@
             this.btnUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUser.UseVisualStyleBackColor = true;
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
+            this.btnUser.Click += Logger.LogButtonClick;
             // 
             // btnMusic
             // 
@@ -155,6 +160,7 @@
             this.btnMusic.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMusic.UseVisualStyleBackColor = true;
             this.btnMusic.Click += new System.EventHandler(this.btnMusic_Click);
+            this.btnMusic.Click += Logger.LogButtonClick;
             // 
             // btnMagazines
             // 
@@ -172,6 +178,7 @@
             this.btnMagazines.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMagazines.UseVisualStyleBackColor = true;
             this.btnMagazines.Click += new System.EventHandler(this.btnMagazines_Click);
+            this.btnMagazines.Click += Logger.LogButtonClick;
             // 
             // btnBooks
             // 
@@ -189,6 +196,7 @@
             this.btnBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBooks.UseVisualStyleBackColor = true;
             this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
+            this.btnBooks.Click += Logger.LogButtonClick;
             // 
             // btnHome
             // 
@@ -206,6 +214,7 @@
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnHome.Click += Logger.LogButtonClick;
             // 
             // panel3
             // 
@@ -234,6 +243,7 @@
             this.btnCollapse.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCollapse.UseVisualStyleBackColor = true;
             this.btnCollapse.Click += new System.EventHandler(this.btnCollapse_Click);
+            this.btnCollapse.Click += Logger.LogButtonClick;
             // 
             // label2
             // 
@@ -294,6 +304,7 @@
             this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.btnLogout.Click += Logger.LogButtonClick;
             // 
             // panel2
             // 

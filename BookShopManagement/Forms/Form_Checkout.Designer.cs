@@ -1,4 +1,6 @@
-﻿namespace BookShopManagement.Forms
+﻿using BookShopManagement.Classes;
+
+namespace BookShopManagement.Forms
 {
     partial class Form_Checkout
     {
@@ -102,6 +104,7 @@
             this.btnExit.TabIndex = 4;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.Click += Logger.LogButtonClick;
             // 
             // pictureBox1
             // 
@@ -128,6 +131,7 @@
             this.btnpayment.Text = "Proceed To Payment...";
             this.btnpayment.UseVisualStyleBackColor = false;
             this.btnpayment.Click += new System.EventHandler(this.btnpayment_Click);
+            this.btnpayment.Click += Logger.LogButtonClick;
             // 
             // lblNameText
             // 
@@ -288,6 +292,7 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancel.Click += Logger.LogButtonClick;
             // 
             // button1
             // 

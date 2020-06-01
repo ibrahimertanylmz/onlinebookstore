@@ -59,6 +59,7 @@
     <Compile Include="Auth.cs" />
     <Compile Include="Classes\Book.cs" />
     <Compile Include="Classes\Customer.cs" />
+    <Compile Include="Classes\Logger.cs" />
     <Compile Include="Classes\ItemToPurchase.cs" />
     <Compile Include="Classes\Magazine.cs" />
     <Compile Include="Classes\MusicCD.cs" />
