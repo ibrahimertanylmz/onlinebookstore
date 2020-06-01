@@ -14,10 +14,17 @@ using System.Threading.Tasks;
 
 namespace BookShopManagement
 {
+    /**
+    * \brief A class that handles the authentications in the program like login and register
+    */
     class Auth
     {
         public static Auth Instance { get; private set; } = new Auth();
-
+        /**
+        * \brief Login. Checks if the entered user name and password have a match in the sql
+        * \param string username: Customer's UserName
+        * \param string password: Customer's Password
+        */
         public Boolean Login (string username, string password)
         {
             SqlCommand command = new SqlCommand("select * FROM TBLCUSTOMER WHERE USERNAME=@P1 AND PASSWORD=@P2", Connection.connect);
@@ -44,7 +51,16 @@ namespace BookShopManagement
             dr.Close();
             return false;
         }
-
+        /**
+        * \brief Register. Registers new users in the database
+        * \param string name: Customer's Name
+        * \param string surname: Customer's Surname
+        * \param string address: Customer's Address
+        * \param string email: Customer's Email
+        * \param string username: Customer's UserName
+        * \param string password: Customer's Password
+        * \param string phone: Customer's Phone No
+        */
         public void Register (string name,string surname, string address, string email, string username, string password, string phone)
         {
             SqlCommand add = new SqlCommand("insert into TBLCUSTOMER (FIRSTNAME,LASTNAME,ADDRESS,EMAIL,USERNAME,PASSWORD,PHONE) VALUES (@P1,@P2,@P3,@P4,@P5,@P6,@P7)", Connection.connect);
