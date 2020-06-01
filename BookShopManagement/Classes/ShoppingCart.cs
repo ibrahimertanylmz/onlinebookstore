@@ -93,7 +93,7 @@ namespace BookShopManagement.Classes
                 MailMessage mail = new MailMessage();
                 SmtpClient smtpServer = new SmtpClient("ams1.sunucum.cloud");
                 string message = "Hello " + Session.Instance.Customer.FirstName + ",\n\n" + "Your order no: "
-                    + Session.Instance.OrderNo + "was successfully processed." +
+                    + Session.Instance.OrderNo + " was successfully processed." +
                     "\nThank you for shopping with us!" +
                     "\n\nYours,\nThe Esogu BookStore";
                 mail.From = new MailAddress("bookstore@enessolak.com.tr");

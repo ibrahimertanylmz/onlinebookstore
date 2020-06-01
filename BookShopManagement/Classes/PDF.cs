@@ -79,14 +79,14 @@ namespace BookShopManagement.Classes
                 {
                     Cell cell1 = new Cell(1, 1).SetTextAlignment(TextAlignment.CENTER).Add(new Paragraph(purchaseItems[i].Quantity.ToString()));
                     Cell cell2 = new Cell(1, 1).SetTextAlignment(TextAlignment.LEFT).Add(new Paragraph(purchaseItems[i].Product.Name.ToString()));
-                    Cell cell3 = new Cell(1, 1).SetTextAlignment(TextAlignment.RIGHT).Add(new Paragraph("€" + purchaseItems[i].Product.Price.ToString("0.00")));
+                    Cell cell3 = new Cell(1, 1).SetTextAlignment(TextAlignment.RIGHT).Add(new Paragraph("€ " + purchaseItems[i].Product.Price.ToString("0.00")));
                     
                     table.AddCell(cell1);
                     table.AddCell(cell2);
                     table.AddCell(cell3);
                 }
                 Cell cellTotal = new Cell(1, 1).SetBackgroundColor(ColorConstants.GREEN).SetTextAlignment(TextAlignment.CENTER).Add(new Paragraph("TOTAL"));
-                Cell cellTotalPrice = new Cell(1, 2).SetBackgroundColor(ColorConstants.GREEN).SetTextAlignment(TextAlignment.CENTER).Add(new Paragraph("€" + 
+                Cell cellTotalPrice = new Cell(1, 2).SetBackgroundColor(ColorConstants.GREEN).SetTextAlignment(TextAlignment.CENTER).Add(new Paragraph("€ " + 
                     ShoppingCart.Instance.PaymentAmount.ToString("0.00")));
 
                 table.AddCell(cellTotal);
