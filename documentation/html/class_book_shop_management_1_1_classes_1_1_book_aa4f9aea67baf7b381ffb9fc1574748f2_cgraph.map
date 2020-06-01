@@ -1,0 +1,4 @@
+<map id="BookShopManagement.Classes.Book.CreateFromID" name="BookShopManagement.Classes.Book.CreateFromID">
+<area shape="rect" id="node1" title="creates Book using a product ID" alt="" coords="5,5,217,47"/>
+<area shape="rect" id="node2" href="$class_book_shop_management_1_1_classes_1_1_book.html#ac8c4b0b136c30f0c769cdae3e0f459e5" title="Book constructor. Sets Book members." alt="" coords="265,5,477,47"/>
+</map>

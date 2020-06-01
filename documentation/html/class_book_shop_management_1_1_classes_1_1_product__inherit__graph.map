@@ -1,0 +1,6 @@
+<map id="BookShopManagement.Classes.Product" name="BookShopManagement.Classes.Product">
+<area shape="rect" id="node1" title=" " alt="" coords="5,57,217,98"/>
+<area shape="rect" id="node2" href="$class_book_shop_management_1_1_classes_1_1_book.html" title="A classderved from product class for books." alt="" coords="265,5,508,32"/>
+<area shape="rect" id="node3" href="$class_book_shop_management_1_1_classes_1_1_magazine.html" title="A classderved from product class for magazines." alt="" coords="281,57,493,98"/>
+<area shape="rect" id="node4" href="$class_book_shop_management_1_1_classes_1_1_music_c_d.html" title="A classderved from product class for Music CDs." alt="" coords="281,122,493,163"/>
+</map>
