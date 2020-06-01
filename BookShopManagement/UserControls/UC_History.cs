@@ -64,7 +64,7 @@ namespace BookShopManagement.UserControls
                     Name = "OrderPrice-" + reader["ORDERNO"].ToString(),
                     Size = new Size(83, 24),
                     TabIndex = 3,
-                    Text = "€" + reader["PRICE"].ToString(),
+                    Text = "€ " + reader["PRICE"].ToString(),
                     ForeColor = Color.White
                 };
                 Button button = new Button

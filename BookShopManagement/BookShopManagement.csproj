@@ -36,10 +36,10 @@
       <HintPath>..\packages\Portable.BouncyCastle.1.8.5\lib\net40\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="BunifuDataViz 1.0.1">
-      <HintPath>..\..\..\Setups\Bunifu DataViz\BunifuDataViz 1.0.1.dll</HintPath>
+      <HintPath>..\packages\BunifuDataViz 1.0.1.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\Setups\Project Files\ePOSOne_Project\ePOSOne.WinForms\bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>..\packages\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
       <HintPath>..\packages\Common.Logging.3.4.1\lib\net40\Common.Logging.dll</HintPath>
@@ -78,9 +78,15 @@
       <HintPath>..\packages\itext7.7.1.11\lib\net40\itext.svg.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -169,6 +175,12 @@
     <Compile Include="UserControls\UC_Payment.Designer.cs">
       <DependentUpon>UC_Payment.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_Reporting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Reporting.Designer.cs">
+      <DependentUpon>UC_Reporting.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_ShoppingCart.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -240,6 +252,9 @@
     <EmbeddedResource Include="UserControls\UC_Payment.resx">
       <DependentUpon>UC_Payment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Reporting.resx">
+      <DependentUpon>UC_Reporting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_ShoppingCart.resx">
       <DependentUpon>UC_ShoppingCart.cs</DependentUpon>
     </EmbeddedResource>
@@ -292,6 +307,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\info.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report-3-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

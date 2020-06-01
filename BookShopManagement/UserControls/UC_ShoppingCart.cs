@@ -163,6 +163,16 @@ namespace BookShopManagement.UserControls
         private void btnCheckout_Click(object sender, EventArgs e)
         {
             ShoppingCart.PlaceOrder();
+            tmrDelete.Start();
+        }
+
+        private void tmrDelete_Tick(object sender, EventArgs e)
+        {
+            if (Form.ActiveForm == this.ParentForm)
+            {
+                LoadItems(true);
+                tmrDelete.Stop();
+            }
         }
     }
 }

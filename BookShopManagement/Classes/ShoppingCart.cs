@@ -83,7 +83,7 @@ namespace BookShopManagement.Classes
         public void CancelOrder() {
             Form_Checkout.ActiveForm.Dispose();
         }
-        public void SendInvoicebySMS() { }
+        public void SendInvoicebySMS() {}
 
         public void SendInvoicebyEmail()
         {

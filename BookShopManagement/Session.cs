@@ -1,5 +1,5 @@
 ﻿/**
- * @author
+ * @author Ahmad Zaidan
  * @date
  * 
  * @edited_by Enes Solak 25.02.2020
@@ -28,7 +28,6 @@ namespace BookShopManagement
         {
             this.Customer = customer;
             OrderNo = Customer.CustomerID.ToString()+DateTime.Now.ToString(@"MMddyyyyHHmmss");
-            Console.WriteLine(OrderNo);
         }
 
         public void add_item(int id, int qty)
