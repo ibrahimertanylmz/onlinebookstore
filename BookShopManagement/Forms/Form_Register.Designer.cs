@@ -82,7 +82,6 @@ namespace BookShopManagement.Forms
             this.btnExit.TabIndex = 4;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            this.btnExit.Click += Logger.LogButtonClick;
             // 
             // pictureBox1
             // 
@@ -120,7 +119,6 @@ namespace BookShopManagement.Forms
             this.btnregister.Text = "Register";
             this.btnregister.UseVisualStyleBackColor = false;
             this.btnregister.Click += new System.EventHandler(this.btnregister_Click);
-            this.btnregister.Click += Logger.LogButtonClick;
             // 
             // txtPassword
             // 
