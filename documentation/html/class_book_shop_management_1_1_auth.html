@@ -95,12 +95,17 @@ $(document).ready(function(){initNavTree('class_book_shop_management_1_1_auth.ht
 <div class="title">BookShopManagement.Auth Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class that handles the authentications in the program like login and register.  
+ <a href="class_book_shop_management_1_1_auth.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a116db3858822ca5797ef89f54a169096"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_book_shop_management_1_1_auth.html#a116db3858822ca5797ef89f54a169096">Login</a> (string username, string password)</td></tr>
+<tr class="memdesc:a116db3858822ca5797ef89f54a169096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Login. Checks if the entered user name and password have a match in the sql.  <a href="class_book_shop_management_1_1_auth.html#a116db3858822ca5797ef89f54a169096">More...</a><br /></td></tr>
 <tr class="separator:a116db3858822ca5797ef89f54a169096"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54f3cfcf4080eb043e6bfd09621c59f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_book_shop_management_1_1_auth.html#a54f3cfcf4080eb043e6bfd09621c59f2">Register</a> (string name, string surname, string address, string email, string username, string password, string phone)</td></tr>
+<tr class="memdesc:a54f3cfcf4080eb043e6bfd09621c59f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register. Registers new users in the database.  <a href="class_book_shop_management_1_1_auth.html#a54f3cfcf4080eb043e6bfd09621c59f2">More...</a><br /></td></tr>
 <tr class="separator:a54f3cfcf4080eb043e6bfd09621c59f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
@@ -108,7 +113,9 @@ Properties</h2></td></tr>
 <tr class="memitem:a1f9ef9f06e188469bfe621981a8a8d55"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_book_shop_management_1_1_auth.html">Auth</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_book_shop_management_1_1_auth.html#a1f9ef9f06e188469bfe621981a8a8d55">Instance</a> = new <a class="el" href="class_book_shop_management_1_1_auth.html">Auth</a>()<code> [get]</code></td></tr>
 <tr class="separator:a1f9ef9f06e188469bfe621981a8a8d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class that handles the authentications in the program like login and register. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a116db3858822ca5797ef89f54a169096"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a116db3858822ca5797ef89f54a169096">&#9670;&nbsp;</a></span>Login()</h2>
 
@@ -134,13 +141,22 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Login. Checks if the entered user name and password have a match in the sql. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>username: Customer's UserName </td></tr>
+    <tr><td class="paramname">string</td><td>password: Customer's Password </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_book_shop_management_1_1_auth_a116db3858822ca5797ef89f54a169096_cgraph.png" border="0" usemap="#class_book_shop_management_1_1_auth_a116db3858822ca5797ef89f54a169096_cgraph" alt=""/></div>
 <map name="class_book_shop_management_1_1_auth_a116db3858822ca5797ef89f54a169096_cgraph" id="class_book_shop_management_1_1_auth_a116db3858822ca5797ef89f54a169096_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,197,47"/>
-<area shape="rect" href="class_book_shop_management_1_1_session.html#a1751ae813f91f71e017a07ea29fde9f3" title=" " alt="" coords="245,5,457,47"/>
+<area shape="rect" title="Login. Checks if the entered user name and password have a match in the sql." alt="" coords="5,5,197,47"/>
+<area shape="rect" href="class_book_shop_management_1_1_session.html#a1751ae813f91f71e017a07ea29fde9f3" title="SetCustomer. Saves the current customers object in the class." alt="" coords="245,5,457,47"/>
 </map>
 </div>
 
@@ -201,6 +217,20 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Register. Registers new users in the database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>name: Customer's Name </td></tr>
+    <tr><td class="paramname">string</td><td>surname: Customer's Surname </td></tr>
+    <tr><td class="paramname">string</td><td>address: Customer's Address </td></tr>
+    <tr><td class="paramname">string</td><td>email: Customer's Email </td></tr>
+    <tr><td class="paramname">string</td><td>username: Customer's UserName </td></tr>
+    <tr><td class="paramname">string</td><td>password: Customer's Password </td></tr>
+    <tr><td class="paramname">string</td><td>phone: Customer's Phone No </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

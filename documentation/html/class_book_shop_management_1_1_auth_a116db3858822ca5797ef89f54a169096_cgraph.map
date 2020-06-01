@@ -1,4 +1,4 @@
 <map id="BookShopManagement.Auth.Login" name="BookShopManagement.Auth.Login">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,197,47"/>
-<area shape="rect" id="node2" href="$class_book_shop_management_1_1_session.html#a1751ae813f91f71e017a07ea29fde9f3" title=" " alt="" coords="245,5,457,47"/>
+<area shape="rect" id="node1" title="Login. Checks if the entered user name and password have a match in the sql." alt="" coords="5,5,197,47"/>
+<area shape="rect" id="node2" href="$class_book_shop_management_1_1_session.html#a1751ae813f91f71e017a07ea29fde9f3" title="SetCustomer. Saves the current customers object in the class." alt="" coords="245,5,457,47"/>
 </map>
