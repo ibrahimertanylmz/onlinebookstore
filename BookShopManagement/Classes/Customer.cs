@@ -24,7 +24,17 @@ namespace BookShopManagement.Classes
         public string Email { get; protected set; }
         public string Username { get; protected set; }
         public string Password { get; protected set; }
-
+        /**
+         * @brief : Constructor function for customer.
+         * @param CustomerID: Id of customer.
+         * @param FirstName: Firstname of customer.
+         * @param LastName: Lastname of customer.
+         * @param Adress: Adress of customer.
+         * @param Phone: Phone number of customer.
+         * @param Email: Email of customer.
+         * @param Username: Username of customer.
+         * @param Password: Password of customer.
+         */
         public Customer(int CustomerID, string FirstName,string LastName, string Adress, string Phone, string Email, string Username, string Password)
         {
             this.CustomerID = CustomerID;
@@ -37,6 +47,9 @@ namespace BookShopManagement.Classes
             this.Password = Password;
         }
 
+        /**
+        * @brief : Gets data of customer from database and updates. 
+        */
         public void Update(string firstname,string lastname, string address, string phone ,string email,string username, string password)
         {
             SqlCommand update = new SqlCommand("UPDATE TBLCUSTOMER SET FIRSTNAME=@P1,LASTNAME=@P2,ADDRESS=@P3,EMAIL=@P4,USERNAME=@P5,PASSWORD=@P6,PHONE=@P7 WHERE CUSTOMERID="+CustomerID, Connection.connect);
