@@ -23,6 +23,9 @@ using iText.Layout.Properties;
 
 namespace BookShopManagement.Classes
 {
+    /**
+    * \brief A class used to create a PDF invoice.
+    */
     class PDF
     {
         string orderNo;
@@ -32,6 +35,9 @@ namespace BookShopManagement.Classes
             createPDF();
         }
 
+         /**
+        * \brief createPDF creates pdf invoice
+        */
         private void createPDF()
         {
             try
@@ -57,7 +63,7 @@ namespace BookShopManagement.Classes
                 document.Add(ls);
 
                 Paragraph paragraph1 = new Paragraph("You ordered the following item(s) on " +
-                    DateTime.Now.ToString("MM/dd/yy H:mm:ss") + "\n");
+                    DateTime.Now.ToString("MM/dd/yy HH:mm:ss") + "\n");
                 document.Add(paragraph1);
 
                 System.Collections.Generic.List<ItemToPurchase> purchaseItems = new System.Collections.Generic.List<ItemToPurchase>();
