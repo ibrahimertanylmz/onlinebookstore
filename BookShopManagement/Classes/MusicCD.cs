@@ -18,7 +18,7 @@ namespace BookShopManagement.Classes
    */
     class MusicCD : Product
     {
-        public string Artist { get; protected set; }
+        public string Singer { get; protected set; }
         public string Type { get; protected set; }
         public string Issue { get; protected set; }
 
@@ -29,13 +29,13 @@ namespace BookShopManagement.Classes
       * \param double Price: Product Price.
       * \param int Quantity: Quantity.
       * \param string Picture: Product picture.
-      * \param string Artist: Product artist.
+      * \param string Singer: Product artist.
       * \param string Type: Product type.
       * \param string Isssue: Product issue.
       */
-        public MusicCD(int Id, string Name, double Price, int Quantity, string Picture, string Artist, string Type,string Issue)
+        public MusicCD(int Id, string Name, double Price, int Quantity, string Picture, string singer, string Type,string Issue)
         {
-            this.Artist = Artist;
+            this.Singer = singer;
             this.Type = Type;
             this.Name = Name;
             this.Id = Id;
