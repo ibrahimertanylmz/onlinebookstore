@@ -130,5 +130,12 @@ namespace BookShopManagement.Forms
         {
             lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
         }
+
+        private void btnReporting_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(btnReporting);
+            UC_Reporting ur = new UC_Reporting();
+            AddControlsToPanel(ur);
+        }
     }
 }

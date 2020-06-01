@@ -34,20 +34,10 @@ namespace BookShopManagement.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Dashboard));
             this.panelLeft = new System.Windows.Forms.Panel();
             this.panelSide = new System.Windows.Forms.Panel();
-            this.btnHistory = new System.Windows.Forms.Button();
-            this.btnCart = new System.Windows.Forms.Button();
-            this.btnUser = new System.Windows.Forms.Button();
-            this.btnMusic = new System.Windows.Forms.Button();
-            this.btnMagazines = new System.Windows.Forms.Button();
-            this.btnBooks = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnCollapse = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblUserNo = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -57,16 +47,28 @@ namespace BookShopManagement.Forms
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timerTime = new System.Windows.Forms.Timer(this.components);
             this.panelControls = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnReporting = new System.Windows.Forms.Button();
+            this.btnHistory = new System.Windows.Forms.Button();
+            this.btnCart = new System.Windows.Forms.Button();
+            this.btnUser = new System.Windows.Forms.Button();
+            this.btnMusic = new System.Windows.Forms.Button();
+            this.btnMagazines = new System.Windows.Forms.Button();
+            this.btnBooks = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnCollapse = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelLeft.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panelLeft.Controls.Add(this.btnReporting);
             this.panelLeft.Controls.Add(this.panelSide);
             this.panelLeft.Controls.Add(this.btnHistory);
             this.panelLeft.Controls.Add(this.btnCart);
@@ -90,132 +92,6 @@ namespace BookShopManagement.Forms
             this.panelSide.Size = new System.Drawing.Size(7, 60);
             this.panelSide.TabIndex = 1;
             // 
-            // btnHistory
-            // 
-            this.btnHistory.FlatAppearance.BorderSize = 0;
-            this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistory.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistory.ForeColor = System.Drawing.Color.White;
-            this.btnHistory.Image = global::BookShopManagement.Properties.Resources.buy__6_;
-            this.btnHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHistory.Location = new System.Drawing.Point(12, 530);
-            this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(203, 60);
-            this.btnHistory.TabIndex = 2;
-            this.btnHistory.Text = "     Orders History";
-            this.btnHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHistory.UseVisualStyleBackColor = true;
-            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
-            this.btnHistory.Click += Logger.LogButtonClick;
-            // 
-            // btnCart
-            // 
-            this.btnCart.FlatAppearance.BorderSize = 0;
-            this.btnCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCart.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCart.ForeColor = System.Drawing.Color.White;
-            this.btnCart.Image = ((System.Drawing.Image)(resources.GetObject("btnCart.Image")));
-            this.btnCart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCart.Location = new System.Drawing.Point(12, 466);
-            this.btnCart.Name = "btnCart";
-            this.btnCart.Size = new System.Drawing.Size(203, 60);
-            this.btnCart.TabIndex = 2;
-            this.btnCart.Text = "     Shopping Cart";
-            this.btnCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCart.UseVisualStyleBackColor = true;
-            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
-            this.btnCart.Click += Logger.LogButtonClick;
-            // 
-            // btnUser
-            // 
-            this.btnUser.FlatAppearance.BorderSize = 0;
-            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUser.ForeColor = System.Drawing.Color.White;
-            this.btnUser.Image = ((System.Drawing.Image)(resources.GetObject("btnUser.Image")));
-            this.btnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUser.Location = new System.Drawing.Point(12, 402);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(203, 60);
-            this.btnUser.TabIndex = 2;
-            this.btnUser.Text = "     User Info";
-            this.btnUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUser.UseVisualStyleBackColor = true;
-            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
-            this.btnUser.Click += Logger.LogButtonClick;
-            // 
-            // btnMusic
-            // 
-            this.btnMusic.FlatAppearance.BorderSize = 0;
-            this.btnMusic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMusic.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMusic.ForeColor = System.Drawing.Color.White;
-            this.btnMusic.Image = ((System.Drawing.Image)(resources.GetObject("btnMusic.Image")));
-            this.btnMusic.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMusic.Location = new System.Drawing.Point(12, 336);
-            this.btnMusic.Name = "btnMusic";
-            this.btnMusic.Size = new System.Drawing.Size(203, 60);
-            this.btnMusic.TabIndex = 2;
-            this.btnMusic.Text = "     Music";
-            this.btnMusic.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMusic.UseVisualStyleBackColor = true;
-            this.btnMusic.Click += new System.EventHandler(this.btnMusic_Click);
-            this.btnMusic.Click += Logger.LogButtonClick;
-            // 
-            // btnMagazines
-            // 
-            this.btnMagazines.FlatAppearance.BorderSize = 0;
-            this.btnMagazines.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMagazines.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMagazines.ForeColor = System.Drawing.Color.White;
-            this.btnMagazines.Image = ((System.Drawing.Image)(resources.GetObject("btnMagazines.Image")));
-            this.btnMagazines.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMagazines.Location = new System.Drawing.Point(12, 271);
-            this.btnMagazines.Name = "btnMagazines";
-            this.btnMagazines.Size = new System.Drawing.Size(203, 60);
-            this.btnMagazines.TabIndex = 2;
-            this.btnMagazines.Text = "     Magazines";
-            this.btnMagazines.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMagazines.UseVisualStyleBackColor = true;
-            this.btnMagazines.Click += new System.EventHandler(this.btnMagazines_Click);
-            this.btnMagazines.Click += Logger.LogButtonClick;
-            // 
-            // btnBooks
-            // 
-            this.btnBooks.FlatAppearance.BorderSize = 0;
-            this.btnBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBooks.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBooks.ForeColor = System.Drawing.Color.White;
-            this.btnBooks.Image = ((System.Drawing.Image)(resources.GetObject("btnBooks.Image")));
-            this.btnBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBooks.Location = new System.Drawing.Point(12, 205);
-            this.btnBooks.Name = "btnBooks";
-            this.btnBooks.Size = new System.Drawing.Size(203, 60);
-            this.btnBooks.TabIndex = 2;
-            this.btnBooks.Text = "     Books";
-            this.btnBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBooks.UseVisualStyleBackColor = true;
-            this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
-            this.btnBooks.Click += Logger.LogButtonClick;
-            // 
-            // btnHome
-            // 
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(11, 140);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(203, 60);
-            this.btnHome.TabIndex = 2;
-            this.btnHome.Text = "     Home";
-            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            this.btnHome.Click += Logger.LogButtonClick;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.btnCollapse);
@@ -227,24 +103,6 @@ namespace BookShopManagement.Forms
             this.panel3.Size = new System.Drawing.Size(215, 140);
             this.panel3.TabIndex = 0;
             // 
-            // btnCollapse
-            // 
-            this.btnCollapse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCollapse.FlatAppearance.BorderSize = 0;
-            this.btnCollapse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCollapse.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCollapse.ForeColor = System.Drawing.Color.White;
-            this.btnCollapse.Image = ((System.Drawing.Image)(resources.GetObject("btnCollapse.Image")));
-            this.btnCollapse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCollapse.Location = new System.Drawing.Point(173, 8);
-            this.btnCollapse.Name = "btnCollapse";
-            this.btnCollapse.Size = new System.Drawing.Size(38, 29);
-            this.btnCollapse.TabIndex = 2;
-            this.btnCollapse.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCollapse.UseVisualStyleBackColor = true;
-            this.btnCollapse.Click += new System.EventHandler(this.btnCollapse_Click);
-            this.btnCollapse.Click += Logger.LogButtonClick;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -255,16 +113,6 @@ namespace BookShopManagement.Forms
             this.label2.Size = new System.Drawing.Size(134, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "Esogu Book Store";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(89, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // panel4
             // 
@@ -286,25 +134,6 @@ namespace BookShopManagement.Forms
             this.label4.Size = new System.Drawing.Size(137, 19);
             this.label4.TabIndex = 0;
             this.label4.Text = "Esogu Book Store";
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(941, 0);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(44, 48);
-            this.btnLogout.TabIndex = 2;
-            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            this.btnLogout.Click += Logger.LogButtonClick;
             // 
             // panel2
             // 
@@ -393,6 +222,187 @@ namespace BookShopManagement.Forms
             this.panelControls.Size = new System.Drawing.Size(985, 580);
             this.panelControls.TabIndex = 2;
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(941, 0);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(44, 48);
+            this.btnLogout.TabIndex = 2;
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnReporting
+            // 
+            this.btnReporting.FlatAppearance.BorderSize = 0;
+            this.btnReporting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporting.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporting.ForeColor = System.Drawing.Color.White;
+            this.btnReporting.Image = global::BookShopManagement.Properties.Resources.report_3_32;
+            this.btnReporting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporting.Location = new System.Drawing.Point(12, 596);
+            this.btnReporting.Name = "btnReporting";
+            this.btnReporting.Size = new System.Drawing.Size(203, 60);
+            this.btnReporting.TabIndex = 3;
+            this.btnReporting.Text = "     Reporting Screen";
+            this.btnReporting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReporting.UseVisualStyleBackColor = true;
+            this.btnReporting.Click += new System.EventHandler(this.btnReporting_Click);
+            // 
+            // btnHistory
+            // 
+            this.btnHistory.FlatAppearance.BorderSize = 0;
+            this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistory.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistory.ForeColor = System.Drawing.Color.White;
+            this.btnHistory.Image = global::BookShopManagement.Properties.Resources.buy__6_;
+            this.btnHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHistory.Location = new System.Drawing.Point(12, 530);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Size = new System.Drawing.Size(203, 60);
+            this.btnHistory.TabIndex = 2;
+            this.btnHistory.Text = "     Orders History";
+            this.btnHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHistory.UseVisualStyleBackColor = true;
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
+            // 
+            // btnCart
+            // 
+            this.btnCart.FlatAppearance.BorderSize = 0;
+            this.btnCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCart.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCart.ForeColor = System.Drawing.Color.White;
+            this.btnCart.Image = ((System.Drawing.Image)(resources.GetObject("btnCart.Image")));
+            this.btnCart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCart.Location = new System.Drawing.Point(12, 466);
+            this.btnCart.Name = "btnCart";
+            this.btnCart.Size = new System.Drawing.Size(203, 60);
+            this.btnCart.TabIndex = 2;
+            this.btnCart.Text = "     Shopping Cart";
+            this.btnCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCart.UseVisualStyleBackColor = true;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
+            // 
+            // btnUser
+            // 
+            this.btnUser.FlatAppearance.BorderSize = 0;
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUser.ForeColor = System.Drawing.Color.White;
+            this.btnUser.Image = ((System.Drawing.Image)(resources.GetObject("btnUser.Image")));
+            this.btnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUser.Location = new System.Drawing.Point(12, 402);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(203, 60);
+            this.btnUser.TabIndex = 2;
+            this.btnUser.Text = "     User Info";
+            this.btnUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUser.UseVisualStyleBackColor = true;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
+            // 
+            // btnMusic
+            // 
+            this.btnMusic.FlatAppearance.BorderSize = 0;
+            this.btnMusic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMusic.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMusic.ForeColor = System.Drawing.Color.White;
+            this.btnMusic.Image = ((System.Drawing.Image)(resources.GetObject("btnMusic.Image")));
+            this.btnMusic.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMusic.Location = new System.Drawing.Point(12, 336);
+            this.btnMusic.Name = "btnMusic";
+            this.btnMusic.Size = new System.Drawing.Size(203, 60);
+            this.btnMusic.TabIndex = 2;
+            this.btnMusic.Text = "     Music";
+            this.btnMusic.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMusic.UseVisualStyleBackColor = true;
+            this.btnMusic.Click += new System.EventHandler(this.btnMusic_Click);
+            // 
+            // btnMagazines
+            // 
+            this.btnMagazines.FlatAppearance.BorderSize = 0;
+            this.btnMagazines.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMagazines.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMagazines.ForeColor = System.Drawing.Color.White;
+            this.btnMagazines.Image = ((System.Drawing.Image)(resources.GetObject("btnMagazines.Image")));
+            this.btnMagazines.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMagazines.Location = new System.Drawing.Point(12, 271);
+            this.btnMagazines.Name = "btnMagazines";
+            this.btnMagazines.Size = new System.Drawing.Size(203, 60);
+            this.btnMagazines.TabIndex = 2;
+            this.btnMagazines.Text = "     Magazines";
+            this.btnMagazines.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMagazines.UseVisualStyleBackColor = true;
+            this.btnMagazines.Click += new System.EventHandler(this.btnMagazines_Click);
+            // 
+            // btnBooks
+            // 
+            this.btnBooks.FlatAppearance.BorderSize = 0;
+            this.btnBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBooks.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBooks.ForeColor = System.Drawing.Color.White;
+            this.btnBooks.Image = ((System.Drawing.Image)(resources.GetObject("btnBooks.Image")));
+            this.btnBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBooks.Location = new System.Drawing.Point(12, 205);
+            this.btnBooks.Name = "btnBooks";
+            this.btnBooks.Size = new System.Drawing.Size(203, 60);
+            this.btnBooks.TabIndex = 2;
+            this.btnBooks.Text = "     Books";
+            this.btnBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBooks.UseVisualStyleBackColor = true;
+            this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(11, 140);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(203, 60);
+            this.btnHome.TabIndex = 2;
+            this.btnHome.Text = "     Home";
+            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // btnCollapse
+            // 
+            this.btnCollapse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCollapse.FlatAppearance.BorderSize = 0;
+            this.btnCollapse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCollapse.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCollapse.ForeColor = System.Drawing.Color.White;
+            this.btnCollapse.Image = ((System.Drawing.Image)(resources.GetObject("btnCollapse.Image")));
+            this.btnCollapse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCollapse.Location = new System.Drawing.Point(173, 8);
+            this.btnCollapse.Name = "btnCollapse";
+            this.btnCollapse.Size = new System.Drawing.Size(38, 29);
+            this.btnCollapse.TabIndex = 2;
+            this.btnCollapse.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCollapse.UseVisualStyleBackColor = true;
+            this.btnCollapse.Click += new System.EventHandler(this.btnCollapse_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(89, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form_Dashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -411,11 +421,11 @@ namespace BookShopManagement.Forms
             this.panelLeft.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -447,5 +457,6 @@ namespace BookShopManagement.Forms
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timerTime;
         private System.Windows.Forms.Panel panelControls;
+        private System.Windows.Forms.Button btnReporting;
     }
 }

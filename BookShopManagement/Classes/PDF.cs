@@ -1,4 +1,10 @@
-﻿using System;
+﻿/**
+ * @author Kumbukani KAMANGA
+ * @date 31.05.2020
+ * 
+ *  @edited_by Ahmad Zaidan 31.05.2020
+ */
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -34,15 +40,10 @@ namespace BookShopManagement.Classes
                 PdfDocument pdf = new PdfDocument(writer);
                 Document document = new Document(pdf);
 
-               /* Image img = new Image(ImageDataFactory
-        .Create(Path.GetParent()))
-        .SetTextAlignment(TextAlignment.CENTER);
-                document.Add(img);*/
-
-                Paragraph header = new Paragraph("ESOGU BOOKSTORE")
-                .SetTextAlignment(TextAlignment.CENTER)
-                .SetFontSize(20);
-                document.Add(header);
+                String imageFile = @"../../Resources/logo.png";
+                ImageData data = ImageDataFactory.Create(imageFile);
+                Image img = new Image(data).SetHorizontalAlignment(iText.Layout.Properties.HorizontalAlignment.CENTER);
+                document.Add(img);
 
                 Paragraph subheader = new Paragraph("Invoice for Order No:" + orderNo.Substring(0,15)).
                     SetTextAlignment(TextAlignment.CENTER).

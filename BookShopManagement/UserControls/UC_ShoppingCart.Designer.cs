@@ -135,7 +135,6 @@ namespace BookShopManagement.UserControls
             this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            this.btnClear.Click += Logger.LogButtonClick;
             // 
             // label5
             // 
@@ -168,7 +167,6 @@ namespace BookShopManagement.UserControls
             this.btnCheckout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCheckout.UseVisualStyleBackColor = true;
             this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
-            this.btnCheckout.Click += Logger.LogButtonClick;
             // 
             // pnlCart
             // 
@@ -227,6 +225,11 @@ namespace BookShopManagement.UserControls
             this.lblQuantity.Size = new System.Drawing.Size(35, 19);
             this.lblQuantity.TabIndex = 0;
             this.lblQuantity.Text = "Qty";
+            // 
+            // tmrDelete
+            // 
+            this.tmrDelete.Interval = 50;
+            this.tmrDelete.Tick += new System.EventHandler(this.tmrDelete_Tick);
             // 
             // UC_ShoppingCart
             // 

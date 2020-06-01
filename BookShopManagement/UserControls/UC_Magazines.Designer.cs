@@ -142,7 +142,6 @@ namespace BookShopManagement.UserControls
             this.btnAdd.Text = "Add To Cart";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            this.btnAdd.Click += Logger.LogButtonClick;
             // 
             // lblPrice
             // 
@@ -188,7 +187,6 @@ namespace BookShopManagement.UserControls
             this.btnDecrease.Text = "-";
             this.btnDecrease.UseVisualStyleBackColor = false;
             this.btnDecrease.Click += new System.EventHandler(this.btnDecrease_Click);
-            this.btnDecrease.Click += Logger.LogButtonClick;
             // 
             // btnIncrease
             // 
@@ -204,7 +202,6 @@ namespace BookShopManagement.UserControls
             this.btnIncrease.Text = "+";
             this.btnIncrease.UseVisualStyleBackColor = false;
             this.btnIncrease.Click += new System.EventHandler(this.btnIncrease_Click);
-            this.btnIncrease.Click += Logger.LogButtonClick;
             // 
             // panel6
             // 
