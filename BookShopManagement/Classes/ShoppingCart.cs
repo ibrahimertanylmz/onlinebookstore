@@ -20,6 +20,10 @@ using BookShopManagement.Forms;
 
 namespace BookShopManagement.Classes
 {
+    /**
+    * \brief A class used to handle the shopping cart processes.
+    *
+    */
     class ShoppingCart 
     {
         public static ShoppingCart Instance { get; private set; } = new ShoppingCart();
@@ -29,18 +33,31 @@ namespace BookShopManagement.Classes
         public double PaymentAmount { get; set; } = 0;
         public int PaymentType { get; set; } //0 for cash, 1 for creditcard      
 
+        /**
+        * \brief Adds product to cart
+        * \param itemToPurchase ItemToPurchase: product to be added
+        */
         public void AddProduct(ItemToPurchase itemToPurchase) 
         {
             ItemsToPurchase.Add(itemToPurchase);
             PaymentAmount += itemToPurchase.Product.Price * itemToPurchase.Quantity;
         }
 
+
+        /**
+        * \brief Removes product from cart
+        * \param itemToPurchase ItemToPurchase: product to be removed
+        */
         public void RemoveProduct(ItemToPurchase itemToPurchase)
         {
             ItemsToPurchase.Remove(itemToPurchase);
             PaymentAmount -= itemToPurchase.Product.Price * itemToPurchase.Quantity;
         }
 
+      /**
+      * \brief Removes all product from cart
+      * \param removeAll bool: 
+      */
         public void RemoveProduct(bool removeAll)
         {
             if (removeAll)
@@ -50,6 +67,10 @@ namespace BookShopManagement.Classes
             }
         }
 
+      /**
+      * \brief Removes product from cart using its ID
+      * \param id int: product to be removed
+      */
         public void RemoveProductByID(int id)
         {
             int index = 0;
@@ -64,8 +85,10 @@ namespace BookShopManagement.Classes
                 index++;
             }
         }
-  
 
+      /**
+      * \brief Places the user's order
+      */
         public static void PlaceOrder()
         {
             if (ShoppingCart.Instance.ItemsToPurchase.Count > 0)
@@ -80,11 +103,22 @@ namespace BookShopManagement.Classes
                 Alert.Create("Your Cart Is Empty!", Alert.Type.Error);
             }
         }
+
+      /**
+      * \brief Cancels the user's order
+      */
         public void CancelOrder() {
             Form_Checkout.ActiveForm.Dispose();
         }
+
+      /**
+      * \brief Sends order invoice to user's phone number
+      */
         public void SendInvoicebySMS() {}
 
+      /**
+      * \brief Sends order invoice to user's email
+      */
         public void SendInvoicebyEmail()
         {
             try

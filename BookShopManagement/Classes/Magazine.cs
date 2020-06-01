@@ -13,6 +13,9 @@ using System.Threading.Tasks;
 
 namespace BookShopManagement.Classes
 {
+    /**
+   * \brief A classderved from product class for magazines.
+   */
     class Magazine : Product
     {
         public string Issue { get; protected set; }
@@ -20,6 +23,18 @@ namespace BookShopManagement.Classes
         public int Page { get; protected set; }
         public string Publisher { get; protected set; }
 
+        /**
+        * \brief Magazine constructor. Sets Magazine members
+        * \param int Id: Product ID
+        * \param string Name: Product Name.
+        * \param double Price: Product Price.
+        * \param int Quantity: Quantity.
+        * \param string Picture: Product picture.
+        * \param string Isssue: Product issue.
+        * \param string Type: Product type.
+        * \param string Publisher: product publisher
+        * \param int Page: Number of pages.
+        */
         public Magazine(int Id, string Name, double Price, int Quantity, string Picture, string Issue, string Type, string Publisher, int Page)
         {
             this.Id = Id;
@@ -33,6 +48,11 @@ namespace BookShopManagement.Classes
             this.Picture = Picture;
         }
 
+        /**
+        * \brief creates Magazine using a product ID
+        * \param int Id: Product ID
+        * \return Magazine
+        */
         public static Magazine CreateFromID(int ID)
         {
             SqlCommand command = new SqlCommand("select * FROM TBLPRODUCT WHERE ID=@P1", Connection.connect);

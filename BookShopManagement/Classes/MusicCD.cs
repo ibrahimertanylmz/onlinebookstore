@@ -13,15 +13,29 @@ using System.Threading.Tasks;
 
 namespace BookShopManagement.Classes
 {
+    /**
+   * \brief A classderved from product class for Music CDs.
+   */
     class MusicCD : Product
     {
         public string Singer { get; protected set; }
         public string Type { get; protected set; }
         public string Issue { get; protected set; }
 
-        public MusicCD(int Id, string Name, double Price, int Quantity, string Picture, string Singer, string Type,string Issue)
+        /**
+      * \brief MusicCD constructor. Sets MusicCD members
+      * \param int Id: Product ID
+      * \param string Name: Product Name.
+      * \param double Price: Product Price.
+      * \param int Quantity: Quantity.
+      * \param string Picture: Product picture.
+      * \param string Singer: Product artist.
+      * \param string Type: Product type.
+      * \param string Isssue: Product issue.
+      */
+        public MusicCD(int Id, string Name, double Price, int Quantity, string Picture, string singer, string Type,string Issue)
         {
-            this.Singer = Singer;
+            this.Singer = singer;
             this.Type = Type;
             this.Name = Name;
             this.Id = Id;
@@ -30,6 +44,12 @@ namespace BookShopManagement.Classes
             this.Issue = Issue;
             this.Picture = Picture;
         }
+
+        /**
+        * \brief creates MusicCD using a product ID
+        * \param int Id: Product ID
+        * \return MusicCD
+        */
         public static MusicCD CreateFromID(int ID)
         {
             SqlCommand command = new SqlCommand("select * FROM TBLPRODUCT WHERE ID=@P1", Connection.connect);

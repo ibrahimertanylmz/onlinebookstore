@@ -15,12 +15,28 @@ using System.Threading.Tasks;
 
 namespace BookShopManagement.Classes
 {
+    /**
+   * \brief A classderved from product class for books.
+   */
     class Book : Product
     {
         public string ISBN { get; protected set; }
         public string Author { get; protected set; }
         public string Publisher { get; protected set; }
         public int Page { get; protected set; }
+
+        /**
+        * \brief Book constructor. Sets Book members
+        * \param int Id: Product ID
+        * \param string Name: Product Name.
+        * \param double Price: Product Price.
+        * \param int Quantity: Quantity.
+        * \param string Picture: Product picture.
+        * \param string ISBN: Product ISBN.
+        * \param string Author: Product author.
+        * \param string Publisher: Product publisher
+        * \param int Page: Number of pages.
+        */
         public Book(int Id, string Name, double Price, int Quantity, string Picture, string ISBN, string Author, string Publisher, int Page)
         {
             this.ISBN = ISBN;
@@ -34,6 +50,11 @@ namespace BookShopManagement.Classes
             this.Picture = Picture;
         }
 
+        /**
+        * \brief creates Book using a product ID
+        * \param int Id: Product ID
+        * \return Book
+        */
         public static Book CreateFromID(int ID)
         {
             SqlCommand command = new SqlCommand("SELECT * FROM TBLPRODUCT WHERE ID=@P1", Connection.connect);
