@@ -1,0 +1,5 @@
+<map id="BookShopManagement.Classes.ShoppingCart.SendInvoicebyEmail" name="BookShopManagement.Classes.ShoppingCart.SendInvoicebyEmail">
+<area shape="rect" id="node1" title="Sends order invoice to user&#39;s email." alt="" coords="5,39,225,80"/>
+<area shape="rect" id="node2" href="$class_book_shop_management_1_1_components_1_1_alert.html#a9c7ca6e4fff9dc08e89ef9326555aa9e" title=" " alt="" coords="273,5,512,47"/>
+<area shape="rect" id="node3" href="$class_book_shop_management_1_1_classes_1_1_shopping_cart.html#aca4a6a2525740f486b66f5dad1c19f49" title="Removes product from cart." alt="" coords="287,71,499,112"/>
+</map>

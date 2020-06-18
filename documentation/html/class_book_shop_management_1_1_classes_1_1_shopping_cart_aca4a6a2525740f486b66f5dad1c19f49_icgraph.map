@@ -1,0 +1,4 @@
+<map id="BookShopManagement.Classes.ShoppingCart.RemoveProduct" name="BookShopManagement.Classes.ShoppingCart.RemoveProduct">
+<area shape="rect" id="node1" title="Removes product from cart." alt="" coords="273,5,485,47"/>
+<area shape="rect" id="node2" href="$class_book_shop_management_1_1_classes_1_1_shopping_cart.html#aa65d4be48e76bf2a1e6bacff2477ab33" title="Sends order invoice to user&#39;s email." alt="" coords="5,5,225,47"/>
+</map>
